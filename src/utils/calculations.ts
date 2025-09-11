@@ -55,23 +55,23 @@ export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'inte
   
   switch (experienceLevel) {
     case 'beginner':
-      baseMax = 1.1;
+      baseMax = 1.13; // 1.1 + 0.03 margin
       requiredRecentJumps = 0;
       break;
     case 'novice':
-      baseMax = 1.1;
+      baseMax = 1.13; // 1.1 + 0.03 margin
       requiredRecentJumps = 10;
       break;
     case 'intermediate':
-      baseMax = 1.3;
+      baseMax = 1.33; // 1.3 + 0.03 margin
       requiredRecentJumps = 25;
       break;
     case 'advanced':
-      baseMax = 1.5;
+      baseMax = 1.53; // 1.5 + 0.03 margin
       requiredRecentJumps = 50;
       break;
     case 'expert':
-      baseMax = 1.7;
+      baseMax = 1.73; // 1.7 + 0.03 margin
       requiredRecentJumps = 75;
       break;
     case 'elite':
@@ -83,16 +83,16 @@ export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'inte
     // Drop down to previous level's max if currency not met
     switch (experienceLevel) {
       case 'novice':
-        baseMax = 1.1; // Already at beginner level
+        baseMax = 1.13; // Already at beginner level (1.1 + 0.03 margin)
         break;
       case 'intermediate':
-        baseMax = 1.1; // Drop to novice/beginner level
+        baseMax = 1.13; // Drop to novice/beginner level (1.1 + 0.03 margin)
         break;
       case 'advanced':
-        baseMax = 1.3; // Drop to intermediate level
+        baseMax = 1.33; // Drop to intermediate level (1.3 + 0.03 margin)
         break;
       case 'expert':
-        baseMax = 1.5; // Drop to advanced level
+        baseMax = 1.53; // Drop to advanced level (1.5 + 0.03 margin)
         break;
     }
   }
