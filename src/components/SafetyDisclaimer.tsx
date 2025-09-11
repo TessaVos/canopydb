@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import DisclaimerHeader from './DisclaimerHeader';
 
 interface SafetyDisclaimerProps {
@@ -10,9 +10,23 @@ interface SafetyDisclaimerProps {
 }
 
 const SafetyDisclaimer: React.FC<SafetyDisclaimerProps> = ({ onClose, onDontShowAgainChange, dontShowAgain }) => {
+  // Prevent body scrolling when modal is open
+  useEffect(() => {
+    // Save the original overflow style
+    const originalOverflow = document.body.style.overflow;
+    
+    // Prevent scrolling
+    document.body.style.overflow = 'hidden';
+    
+    // Cleanup function to restore scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto my-4">
         <div className="p-6">
           <DisclaimerHeader onClose={onClose} />
 
