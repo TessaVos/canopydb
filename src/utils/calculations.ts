@@ -104,17 +104,17 @@ export const getMinimumCanopySize = (experienceLevel: 'beginner' | 'novice' | 'i
   switch (experienceLevel) {
     case 'beginner':
     case 'novice':
-      return 170;
+      return 168; // 170 - 2 sqft margin
     case 'intermediate':
-      return 150;
+      return 148; // 150 - 2 sqft margin
     case 'advanced':
-      return 135;
+      return 133; // 135 - 2 sqft margin
     case 'expert':
-      return 120;
+      return 118; // 120 - 2 sqft margin
     case 'elite':
       return 0; // No limit
     default:
-      return 170;
+      return 168; // 170 - 2 sqft margin
   }
 };
 
