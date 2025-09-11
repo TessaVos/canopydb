@@ -137,37 +137,40 @@ export const getRequiredRecentJumps = (experienceLevel: 'beginner' | 'novice' | 
   }
 };
 
-export const filterCanopiesByExperience = (canopy: Canopy, experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite'): boolean => {
-  const categoryNumber = parseInt(canopy.commontype || '1');
-  
-  switch (experienceLevel) {
-    case 'beginner':
-    case 'novice':
-      return categoryNumber === 1; // Student canopies only
-    case 'intermediate':
-      return categoryNumber <= 2; // Student and intermediate canopies
-    case 'advanced':
-    case 'expert':
-    case 'elite':
-      return categoryNumber <= 3; // All categories
-    default:
-      return false;
-  }
-};
-
 export const isCanopyCurrentlyProduced = (canopy: Canopy): boolean => {
   // If no production years specified, assume current
-  if (!canopy.firstyearofproduction && !canopy.lastyearofproduction) return true;
+  if (!canopy.firstYearOfProduction && !canopy.lastYearOfProduction) return true;
   
   // If has last year of production, it's discontinued
-  if (canopy.lastyearofproduction) return false;
+  if (canopy.lastYearOfProduction) return false;
   
   // If only has first year and it's recent, assume current
-  if (canopy.firstyearofproduction) {
-    const firstYear = parseInt(canopy.firstyearofproduction);
+  if (canopy.firstYearOfProduction) {
+    const firstYear = parseInt(canopy.firstYearOfProduction);
     const currentYear = new Date().getFullYear();
     return (currentYear - firstYear) <= 30; // Reasonable assumption for current production
   }
   
   return true;
+};
+
+export const canopyMeetsSafetyGuidelines = (
+  canopy: Canopy, 
+  exitWeightInPounds: number, 
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite',
+  maxSafeWingLoading: number
+): boolean => {
+  if (!canopy.availableSizes || canopy.availableSizes.length === 0) return false;
+
+  // Check if any available size meets safety guidelines
+  for (const size of canopy.availableSizes) {
+    const wingLoading = calculateWingLoading(exitWeightInPounds, size);
+    const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size);
+    
+    if (wingLoading <= maxSafeWingLoading && safetyLevel !== 'dangerous') {
+      return true;
+    }
+  }
+  
+  return false;
 };

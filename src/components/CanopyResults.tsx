@@ -14,44 +14,35 @@ interface CanopyResultsProps {
   experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   exitWeightInPounds: number;
   maxSafeWingLoading: number;
+  showOnlySafeCanopies?: boolean;
 }
 
 const CanopyResults: React.FC<CanopyResultsProps> = ({
   canopies,
   experienceLevel,
   exitWeightInPounds,
-  maxSafeWingLoading
+  maxSafeWingLoading,
+  showOnlySafeCanopies = false
 }) => {
   const canopiesWithSizes = useMemo(() => {
     return canopies.map(canopy => {
-      if (!canopy.minsize || !canopy.maxsize) return null;
+      if (!canopy.availableSizes || canopy.availableSizes.length === 0) return null;
 
-      const manufacturer = manufacturersData.find(m => m.id === canopy.manufacturerid);
+      const manufacturer = manufacturersData.find(m => m.id === canopy.manufacturerId);
       const suitableSizes = [];
 
-      // Generate size range (typically in increments of 10-20 sq ft)
-      const minSize = parseInt(canopy.minsize);
-      const maxSize = parseInt(canopy.maxsize);
-      const increment = Math.max(10, Math.round((maxSize - minSize) / 10));
-
-      for (let size = minSize; size <= maxSize; size += increment) {
+      // Use available sizes directly
+      for (const size of canopy.availableSizes) {
         const wingLoading = calculateWingLoading(exitWeightInPounds, size);
         const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size);
         
+        // When safety filter is active, only include non-dangerous sizes
+        if (showOnlySafeCanopies && safetyLevel === 'dangerous') {
+          continue;
+        }
+        
         suitableSizes.push({
           size,
-          wingLoading,
-          safetyLevel,
-          isSafe: wingLoading <= maxSafeWingLoading
-        });
-      }
-
-      // Add max size if not included
-      if (!suitableSizes.some(s => s.size === maxSize)) {
-        const wingLoading = calculateWingLoading(exitWeightInPounds, maxSize);
-        const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, maxSize);
-        suitableSizes.push({
-          size: maxSize,
           wingLoading,
           safetyLevel,
           isSafe: wingLoading <= maxSafeWingLoading
@@ -68,7 +59,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         hasSafeSizes: safeSizes.length > 0
       };
     }).filter((item): item is NonNullable<typeof item> => item !== null);
-  }, [canopies, exitWeightInPounds, experienceLevel, maxSafeWingLoading]);
+  }, [canopies, exitWeightInPounds, experienceLevel, maxSafeWingLoading, showOnlySafeCanopies]);
 
   const safeCanopies = canopiesWithSizes.filter(c => c.hasSafeSizes);
   const unsafeCanopies = canopiesWithSizes.filter(c => !c.hasSafeSizes);
@@ -117,6 +108,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
                 userExitWeight={exitWeightInPounds}
                 userExperienceLevel={experienceLevel}
                 maxSafeWingLoading={maxSafeWingLoading}
+                showOnlySafeCanopies={showOnlySafeCanopies}
               />
             ))}
           </div>

@@ -11,15 +11,10 @@ export interface Canopy {
   id: string;
   name: string;
   cells?: string;
-  commontype?: string;
-  dropzoneid?: string;
-  firstyearofproduction?: string;
-  lastyearofproduction?: string;
-  manufacturerid: string;
-  maxsize?: string;
-  minsize?: string;
-  planform?: string;
-  planformcells?: string;
+  firstYearOfProduction?: string;
+  lastYearOfProduction?: string;
+  manufacturerId: string;
+  availableSizes?: number[]; // Array of all available sizes
   url?: string;
   links?: Array<{
     type: string;

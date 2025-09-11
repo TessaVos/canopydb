@@ -56,8 +56,7 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Wing Loading Analysis</h3>
             <CanopySizeChart 
-              minSize={canopy.minsize || '0'}
-              maxSize={canopy.maxsize || '0'}
+              availableSizes={canopy.availableSizes || []}
               userExitWeight={userExitWeight}
               userExperienceLevel={userExperienceLevel}
               maxSafeWingLoading={maxSafeWingLoading}
@@ -68,11 +67,13 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Basic Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-2">
-                <Ruler className="w-4 h-4 text-gray-500" />
-                <span className="text-sm text-gray-600">Size Range:</span>
-                <span className="font-medium">{canopy.minsize} - {canopy.maxsize} sq ft</span>
-              </div>
+              {canopy.availableSizes && canopy.availableSizes.length > 0 && (
+                <div className="flex items-center gap-2">
+                  <Ruler className="w-4 h-4 text-gray-500" />
+                  <span className="text-sm text-gray-600">Available Sizes:</span>
+                  <span className="font-medium">{Math.min(...canopy.availableSizes)} - {Math.max(...canopy.availableSizes)} sq ft</span>
+                </div>
+              )}
               {canopy.cells && (
                 <div className="flex items-center gap-2">
                   <Layers className="w-4 h-4 text-gray-500" />
@@ -80,40 +81,28 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
                   <span className="font-medium">{canopy.cells}</span>
                 </div>
               )}
-              {canopy.firstyearofproduction && (
+              {canopy.firstYearOfProduction && (
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-gray-500" />
                   <span className="text-sm text-gray-600">First Production:</span>
-                  <span className="font-medium">{canopy.firstyearofproduction}</span>
+                  <span className="font-medium">{canopy.firstYearOfProduction}</span>
                 </div>
               )}
-              {canopy.lastyearofproduction && (
+              {canopy.lastYearOfProduction && (
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-gray-500" />
                   <span className="text-sm text-gray-600">Last Production:</span>
-                  <span className="font-medium">{canopy.lastyearofproduction}</span>
+                  <span className="font-medium">{canopy.lastYearOfProduction}</span>
                 </div>
               )}
             </div>
           </div>
 
           {/* Technical Specifications */}
-          {(canopy.planform || canopy.planformcells || canopy.crossbraced !== undefined) && (
+          {canopy.crossbraced !== undefined && (
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Technical Specifications</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {canopy.planform && (
-                  <div>
-                    <span className="text-sm text-gray-600">Planform:</span>
-                    <span className="font-medium ml-2">{canopy.planform}</span>
-                  </div>
-                )}
-                {canopy.planformcells && (
-                  <div>
-                    <span className="text-sm text-gray-600">Planform Cells:</span>
-                    <span className="font-medium ml-2">{canopy.planformcells}</span>
-                  </div>
-                )}
                 <div>
                   <span className="text-sm text-gray-600">Crossbraced:</span>
                   <span className="font-medium ml-2">{canopy.crossbraced ? 'Yes' : 'No'}</span>

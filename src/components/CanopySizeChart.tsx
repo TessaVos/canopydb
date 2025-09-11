@@ -5,60 +5,36 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { calculateWingLoading, getSafetyLevel } from '../utils/calculations';
 
 interface CanopySizeChartProps {
-  minSize: string;
-  maxSize: string;
+  availableSizes: number[];
   userExitWeight: number;
   userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   maxSafeWingLoading: number;
 }
 
 const CanopySizeChart: React.FC<CanopySizeChartProps> = ({ 
-  minSize, 
-  maxSize, 
+  availableSizes, 
   userExitWeight, 
   userExperienceLevel, 
   maxSafeWingLoading 
 }) => {
-  // Generate size data points between min and max
+  // Generate size data points from available sizes
   const generateSizeData = () => {
-    const min = parseInt(minSize);
-    const max = parseInt(maxSize);
+    if (userExitWeight === 0) return [];
     
-    if (isNaN(min) || isNaN(max) || userExitWeight === 0) return [];
-    
-    const sizes = [];
-    const step = Math.max(10, Math.floor((max - min) / 8)); // Create reasonable number of data points
-    
-    for (let size = min; size <= max; size += step) {
+    const sizes = availableSizes.map(size => {
       const wingLoading = calculateWingLoading(userExitWeight, size);
       const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size);
       const isSafe = wingLoading <= maxSafeWingLoading;
       
-      sizes.push({
+      return {
         size: size,
         wingLoading: parseFloat(wingLoading.toFixed(2)),
         safetyLevel,
         isSafe,
         label: `${size} sq ft`,
         color: getBarColor(safetyLevel, isSafe)
-      });
-    }
-    
-    // Always include the max size if it's not already included
-    if (sizes[sizes.length - 1]?.size !== max) {
-      const wingLoading = calculateWingLoading(userExitWeight, max);
-      const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, max);
-      const isSafe = wingLoading <= maxSafeWingLoading;
-      
-      sizes.push({
-        size: max,
-        wingLoading: parseFloat(wingLoading.toFixed(2)),
-        safetyLevel,
-        isSafe,
-        label: `${max} sq ft`,
-        color: getBarColor(safetyLevel, isSafe)
-      });
-    }
+      };
+    });
     
     return sizes;
   };

@@ -10,7 +10,8 @@ import {
   determineExperienceLevel,
   getMaxWingLoading,
   isCanopyCurrentlyProduced,
-  calculateWingLoading
+  calculateWingLoading,
+  canopyMeetsSafetyGuidelines
 } from '../utils/calculations';
 import { UserProfile } from '../types';
 
@@ -26,6 +27,7 @@ export default function Home() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(true);
+  const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(false);
   const [selectedManufacturer, setSelectedManufacturer] = useState('all');
   const [showSafetyDisclaimer, setShowSafetyDisclaimer] = useState(false);
   const [dontShowDisclaimer, setDontShowDisclaimer] = useState(false);
@@ -75,7 +77,7 @@ export default function Home() {
       // Search filter
       if (searchTerm) {
         const searchLower = searchTerm.toLowerCase();
-        const manufacturer = manufacturersData.find(m => m.id === canopy.manufacturerid);
+        const manufacturer = manufacturersData.find(m => m.id === canopy.manufacturerId);
         const manufacturerName = manufacturer?.name?.toLowerCase() || '';
         
         if (!canopy.name.toLowerCase().includes(searchLower) && 
@@ -85,22 +87,22 @@ export default function Home() {
       }
 
       // Manufacturer filter
-      if (selectedManufacturer !== 'all' && canopy.manufacturerid !== selectedManufacturer) {
+      if (selectedManufacturer !== 'all' && canopy.manufacturerId !== selectedManufacturer) {
+        return false;
+      }
+
+      // Safety guidelines filter
+      if (showOnlySafeCanopies && !canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading)) {
         return false;
       }
 
       // Must have size information
-      return canopy.minsize && canopy.maxsize;
+      return canopy.availableSizes && canopy.availableSizes.length > 0;
     });
 
-    // Sort by category then by name
-    return filtered.sort((a, b) => {
-      if (a.commontype !== b.commontype) {
-        return parseInt(a.commontype || '1') - parseInt(b.commontype || '1');
-      }
-      return a.name.localeCompare(b.name);
-    });
-  }, [showOnlyCurrentProduction, searchTerm, selectedManufacturer]);
+    // Sort by name only
+    return filtered.sort((a, b) => a.name.localeCompare(b.name));
+  }, [showOnlyCurrentProduction, searchTerm, selectedManufacturer, showOnlySafeCanopies, experienceLevel, exitWeightInPounds]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100">
@@ -201,6 +203,20 @@ export default function Home() {
                     Current production only
                   </label>
                 </div>
+
+                {/* Safety Guidelines */}
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="safeCanopies"
+                    checked={showOnlySafeCanopies}
+                    onChange={(e) => setShowOnlySafeCanopies(e.target.checked)}
+                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <label htmlFor="safeCanopies" className="ml-2 text-sm text-gray-700">
+                    Show only canopies that meet safety guidelines
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -212,6 +228,7 @@ export default function Home() {
               experienceLevel={experienceLevel}
               exitWeightInPounds={exitWeightInPounds}
               maxSafeWingLoading={maxSafeWingLoading}
+              showOnlySafeCanopies={showOnlySafeCanopies}
             />
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Badge from './ui/Badge';
+import { calculateWingLoading, getSafetyLevel } from '../utils/calculations';
 
 interface SizeInfoProps {
   sizes: Array<{
@@ -9,21 +10,23 @@ interface SizeInfoProps {
     wingLoading: number;
     safetyLevel: 'safe' | 'caution' | 'dangerous';
   }>;
-  minSize: string;
-  maxSize: string;
+  availableSizes?: number[];
+  userExitWeight: number;
+  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   isExpanded: boolean;
   onToggleExpand: () => void;
+  showOnlySafeCanopies?: boolean;
 }
 
 const SizeInfo: React.FC<SizeInfoProps> = ({
   sizes,
-  minSize,
-  maxSize,
+  availableSizes,
+  userExitWeight,
+  userExperienceLevel,
   isExpanded,
   onToggleExpand,
+  showOnlySafeCanopies = false,
 }) => {
-  const displaySizes = isExpanded ? sizes : sizes.slice(0, 4);
-
   const getSafetyVariant = (level: 'safe' | 'caution' | 'dangerous') => {
     switch (level) {
       case 'safe': return 'green';
@@ -32,33 +35,52 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
     }
   };
 
+  // Calculate wing loading and safety for each available size
+  const availableSizesWithData = availableSizes?.map(size => {
+    const wingLoading = calculateWingLoading(userExitWeight, size);
+    const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size);
+    return {
+      size,
+      wingLoading,
+      safetyLevel
+    };
+  }).filter(sizeData => {
+    // When safety filter is active, only include non-dangerous sizes
+    return !showOnlySafeCanopies || sizeData.safetyLevel !== 'dangerous';
+  }) || [];
+
+  const displaySizes = isExpanded ? availableSizesWithData : availableSizesWithData.slice(0, 4);
+
   return (
     <div className="mb-4">
-      <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
-        <span>Available Sizes:</span>
-        <span>{minSize} - {maxSize} sq ft</span>
-      </div>
-      <div className="space-y-2">
-        {displaySizes.map((size, index) => (
-          <div key={index} className="flex items-center justify-between text-sm">
-            <span className="font-medium">{size.size} sq ft</span>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600">WL: {size.wingLoading.toFixed(2)}</span>
-              <Badge variant={getSafetyVariant(size.safetyLevel)} className="border">
-                {size.safetyLevel}
-              </Badge>
+      <div className="text-sm font-medium text-gray-700 mb-2">Available Sizes:</div>
+      {availableSizes && availableSizes.length > 0 ? (
+        <div className="space-y-2">
+          {displaySizes.map((sizeData, index) => (
+            <div key={index} className="flex items-center justify-between text-sm">
+              <span className="font-medium">{sizeData.size} sq ft</span>
+              <div className="flex items-center gap-2">
+                <span className="text-gray-600">WL: {sizeData.wingLoading.toFixed(2)}</span>
+                <Badge variant={getSafetyVariant(sizeData.safetyLevel)} className="border">
+                  {sizeData.safetyLevel}
+                </Badge>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      {sizes.length > 4 && (
-        <button
-          className="text-xs text-blue-600 mt-2 hover:underline focus:outline-none"
-          onClick={onToggleExpand}
-          type="button"
-        >
-          {isExpanded ? 'Show less' : `See all (${sizes.length})`}
-        </button>
+          ))}
+          {availableSizesWithData.length > 4 && (
+            <button
+              className="text-xs text-blue-600 mt-2 hover:underline focus:outline-none"
+              onClick={onToggleExpand}
+              type="button"
+            >
+              {isExpanded ? 'Show less' : `See all (${availableSizesWithData.length})`}
+            </button>
+          )}
+        </div>
+      ) : (
+        <div className="text-sm text-gray-500 italic">
+          No available sizes specified
+        </div>
       )}
     </div>
   );
