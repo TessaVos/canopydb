@@ -9,10 +9,10 @@ export const determineExperienceLevel = (totalJumps: number, recentJumps: number
   let baseLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   
   if (totalJumps < 25) baseLevel = 'beginner';
-  else if (totalJumps <= 100) baseLevel = 'novice';
-  else if (totalJumps <= 400) baseLevel = 'intermediate';
-  else if (totalJumps <= 700) baseLevel = 'advanced';
-  else if (totalJumps <= 1000) baseLevel = 'expert';
+  else if (totalJumps < 100) baseLevel = 'novice';
+  else if (totalJumps < 400) baseLevel = 'intermediate';
+  else if (totalJumps < 700) baseLevel = 'advanced';
+  else if (totalJumps < 1000) baseLevel = 'expert';
   else baseLevel = 'elite';
 
   // If beginner, currency doesn't matter
