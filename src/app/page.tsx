@@ -26,7 +26,7 @@ export default function Home() {
   });
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(true);
+  const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(false);
   const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(false);
   const [selectedManufacturer, setSelectedManufacturer] = useState('all');
   const [showSafetyDisclaimer, setShowSafetyDisclaimer] = useState(false);
