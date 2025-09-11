@@ -53,6 +53,7 @@ const SafetyDisclaimer: React.FC<SafetyDisclaimerProps> = ({ onClose, onDontShow
               <h3 className="font-semibold text-gray-900 mb-2">Industry Standards Referenced:</h3>
               <ul className="list-disc list-inside space-y-1 text-sm">
                 <li>USPA Basic Safety Requirements (BSRs)</li>
+                <li>KNVvL Basic Safety Requirements (BVR)</li>
                 <li>Common dropzone recommendations</li>
                 <li>Manufacturer sizing guidelines</li>
                 <li>Instructor and rigger best practices</li>
