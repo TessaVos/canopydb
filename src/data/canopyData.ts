@@ -118,7 +118,7 @@ export const canopiesData: Canopy[] = [
         "id": "wqQ7yiuJPDw"
       }
     ],
-    "crossbraced": true
+    "crossbraced": false
   }
 ];
 
