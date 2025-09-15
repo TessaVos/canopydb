@@ -8,13 +8,15 @@ interface ProfileSummaryProps {
   maxSafeWingLoading: number;
   safetyLevel: 'safe' | 'caution' | 'dangerous';
   currentWingLoading: number;
+  exitWeightUnit: 'lbs' | 'kg';
 }
 
 const ProfileSummary: React.FC<ProfileSummaryProps> = ({
   exitWeightInPounds,
   maxSafeWingLoading,
   safetyLevel,
-  currentWingLoading
+  currentWingLoading,
+  exitWeightUnit
 }) => {
   const getCurrentWingLoadingVariant = (wingLoading: number, maxSafe: number) => {
     if (wingLoading === 0) return 'default';
@@ -50,7 +52,9 @@ const ProfileSummary: React.FC<ProfileSummaryProps> = ({
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-600">Exit Weight:</span>
           <span className="font-medium text-gray-900">
-            {exitWeightInPounds.toFixed(1)} lbs
+            {exitWeightUnit === 'kg'
+              ? (exitWeightInPounds / 2.20462).toFixed(1) + ' kg'
+              : exitWeightInPounds.toFixed(1) + ' lbs'}
           </span>
         </div>
 

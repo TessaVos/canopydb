@@ -237,6 +237,7 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
           maxSafeWingLoading={maxSafeWingLoading}
           safetyLevel={safetyLevel}
           currentWingLoading={currentWingLoading}
+          exitWeightUnit={userProfile.weightUnit}
         />
 
         <SafetyGuidelines />
