@@ -36,7 +36,9 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
   };
 
   // Calculate wing loading and safety for each available size
-  const availableSizesWithData = availableSizes?.map(size => {
+  const availableSizesWithData = availableSizes
+    ?.sort((a, b) => b - a) // Sort sizes in descending order (biggest first)
+    ?.map(size => {
     const wingLoading = calculateWingLoading(userExitWeight, size);
     const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size);
     return {
