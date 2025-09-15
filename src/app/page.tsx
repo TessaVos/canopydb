@@ -20,8 +20,8 @@ export default function Home() {
   const [userProfile, setUserProfile] = useState<UserProfile>({
     totalJumps: 0,
     recentJumps: 0,
-    exitWeight: 180,
-    weightUnit: 'lbs',
+    exitWeight: 70,
+    weightUnit: 'kg',
     experienceLevel: 'beginner',
     currentCanopySize: 240
   });
