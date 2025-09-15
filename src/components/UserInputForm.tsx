@@ -71,7 +71,7 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
 
   const currencyWarning = userProfile.totalJumps > 25 && userProfile.recentJumps < 10;
   const safetyLevel = userProfile.currentCanopySize > 0 
-    ? getSafetyLevel(currentWingLoading, experienceLevel, userProfile.currentCanopySize)
+    ? getSafetyLevel(currentWingLoading, experienceLevel, userProfile.currentCanopySize, userProfile.recentJumps)
     : 'safe'; // Default to safe if no current canopy size
 
   return (

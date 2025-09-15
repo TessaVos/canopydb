@@ -93,7 +93,7 @@ export default function Home() {
       }
 
       // Safety guidelines filter
-      if (showOnlySafeCanopies && !canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading)) {
+      if (showOnlySafeCanopies && !canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading, userProfile.recentJumps)) {
         return false;
       }
 
@@ -167,6 +167,7 @@ export default function Home() {
               exitWeightInPounds={exitWeightInPounds}
               maxSafeWingLoading={maxSafeWingLoading}
               showOnlySafeCanopies={showOnlySafeCanopies}
+              recentJumps={userProfile.recentJumps}
             />
           </div>
         </div>

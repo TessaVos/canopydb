@@ -14,6 +14,7 @@ interface CanopyTileProps {
   userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   maxSafeWingLoading: number;
   showOnlySafeCanopies?: boolean;
+  recentJumps: number;
 }
 
 const CanopyTile: React.FC<CanopyTileProps> = ({
@@ -24,7 +25,8 @@ const CanopyTile: React.FC<CanopyTileProps> = ({
   userExitWeight,
   userExperienceLevel,
   maxSafeWingLoading,
-  showOnlySafeCanopies = false
+  showOnlySafeCanopies = false,
+  recentJumps
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const sizes = showUnsafe ? canopy.suitableSizes : canopy.safeSizes;
@@ -58,6 +60,7 @@ const CanopyTile: React.FC<CanopyTileProps> = ({
             isExpanded={isExpanded}
             onToggleExpand={() => onToggleExpand(canopy.id)}
             showOnlySafeCanopies={showOnlySafeCanopies}
+            recentJumps={recentJumps}
           />
 
           {/* Links */}
@@ -81,6 +84,7 @@ const CanopyTile: React.FC<CanopyTileProps> = ({
         userExitWeight={userExitWeight}
         userExperienceLevel={userExperienceLevel}
         maxSafeWingLoading={maxSafeWingLoading}
+        recentJumps={recentJumps}
       />
     </>
   );

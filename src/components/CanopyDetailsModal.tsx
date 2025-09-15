@@ -13,6 +13,7 @@ interface CanopyDetailsModalProps {
   userExitWeight: number;
   userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   maxSafeWingLoading: number;
+  recentJumps: number;
 }
 
 const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
@@ -22,7 +23,8 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
   onClose,
   userExitWeight,
   userExperienceLevel,
-  maxSafeWingLoading
+  maxSafeWingLoading,
+  recentJumps
 }) => {
   if (!isOpen) return null;
 
@@ -60,6 +62,7 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
               userExitWeight={userExitWeight}
               userExperienceLevel={userExperienceLevel}
               maxSafeWingLoading={maxSafeWingLoading}
+              recentJumps={recentJumps}
             />
           </div>
 

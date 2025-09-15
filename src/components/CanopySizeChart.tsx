@@ -9,13 +9,15 @@ interface CanopySizeChartProps {
   userExitWeight: number;
   userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
   maxSafeWingLoading: number;
+  recentJumps: number;
 }
 
 const CanopySizeChart: React.FC<CanopySizeChartProps> = ({ 
   availableSizes, 
   userExitWeight, 
   userExperienceLevel, 
-  maxSafeWingLoading 
+  maxSafeWingLoading,
+  recentJumps
 }) => {
   // Generate size data points from available sizes
   const generateSizeData = () => {
@@ -23,7 +25,7 @@ const CanopySizeChart: React.FC<CanopySizeChartProps> = ({
     
     const sizes = availableSizes.map(size => {
       const wingLoading = calculateWingLoading(userExitWeight, size);
-      const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size);
+      const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size, recentJumps);
       const isSafe = wingLoading <= maxSafeWingLoading;
       
       return {

@@ -16,6 +16,7 @@ interface SizeInfoProps {
   isExpanded: boolean;
   onToggleExpand: () => void;
   showOnlySafeCanopies?: boolean;
+  recentJumps: number;
 }
 
 const SizeInfo: React.FC<SizeInfoProps> = ({
@@ -26,6 +27,7 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
   isExpanded,
   onToggleExpand,
   showOnlySafeCanopies = false,
+  recentJumps,
 }) => {
   const getSafetyVariant = (level: 'safe' | 'caution' | 'dangerous') => {
     switch (level) {
@@ -40,7 +42,7 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
     ?.sort((a, b) => b - a) // Sort sizes in descending order (biggest first)
     ?.map(size => {
     const wingLoading = calculateWingLoading(userExitWeight, size);
-    const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size);
+    const safetyLevel = getSafetyLevel(wingLoading, userExperienceLevel, size, recentJumps);
     return {
       size,
       wingLoading,

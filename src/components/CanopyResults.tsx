@@ -15,6 +15,7 @@ interface CanopyResultsProps {
   exitWeightInPounds: number;
   maxSafeWingLoading: number;
   showOnlySafeCanopies?: boolean;
+  recentJumps: number;
 }
 
 const CanopyResults: React.FC<CanopyResultsProps> = ({
@@ -22,7 +23,8 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
   experienceLevel,
   exitWeightInPounds,
   maxSafeWingLoading,
-  showOnlySafeCanopies = false
+  showOnlySafeCanopies = false,
+  recentJumps
 }) => {
   const canopiesWithSizes = useMemo(() => {
     return canopies.map(canopy => {
@@ -34,7 +36,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
       // Use available sizes directly
       for (const size of canopy.availableSizes) {
         const wingLoading = calculateWingLoading(exitWeightInPounds, size);
-        const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size);
+        const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size, recentJumps);
         
         // When safety filter is active, only include non-dangerous sizes
         if (showOnlySafeCanopies && safetyLevel === 'dangerous') {
@@ -59,7 +61,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         hasSafeSizes: safeSizes.length > 0
       };
     }).filter((item): item is NonNullable<typeof item> => item !== null);
-  }, [canopies, exitWeightInPounds, experienceLevel, maxSafeWingLoading, showOnlySafeCanopies]);
+  }, [canopies, exitWeightInPounds, experienceLevel, maxSafeWingLoading, showOnlySafeCanopies, recentJumps]);
 
   const safeCanopies = canopiesWithSizes.filter(c => c.hasSafeSizes);
   const unsafeCanopies = canopiesWithSizes.filter(c => !c.hasSafeSizes);
@@ -109,6 +111,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
                 userExperienceLevel={experienceLevel}
                 maxSafeWingLoading={maxSafeWingLoading}
                 showOnlySafeCanopies={showOnlySafeCanopies}
+                recentJumps={recentJumps}
               />
             ))}
           </div>
@@ -138,6 +141,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
                 userExitWeight={exitWeightInPounds}
                 userExperienceLevel={experienceLevel}
                 maxSafeWingLoading={maxSafeWingLoading}
+                recentJumps={recentJumps}
               />
             ))}
           </div>
