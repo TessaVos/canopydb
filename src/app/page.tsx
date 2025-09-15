@@ -28,7 +28,7 @@ export default function Home() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(false);
-  const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(false);
+  const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(true);
   const [selectedManufacturer, setSelectedManufacturer] = useState('all');
   const [showSafetyDisclaimer, setShowSafetyDisclaimer] = useState(false);
   const [dontShowDisclaimer, setDontShowDisclaimer] = useState(false);
