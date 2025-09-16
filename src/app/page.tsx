@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
-import { AlertTriangle, Search, Filter } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { AlertTriangle } from 'lucide-react';
 import UserInputForm from '../components/UserInputForm';
 import CanopyResults from '../components/CanopyResults';
-import SafetyDisclaimer from '../components/SafetyDisclaimer';
 import FiltersSection from '../components/FiltersSection';
 import { canopiesData, manufacturersData } from '../data/canopyData';
 import {
@@ -31,23 +30,6 @@ export default function Home() {
   const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(false);
   const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(true);
   const [selectedManufacturer, setSelectedManufacturer] = useState('all');
-  const [showSafetyDisclaimer, setShowSafetyDisclaimer] = useState(false);
-  const [dontShowDisclaimer, setDontShowDisclaimer] = useState(false);
-
-  useEffect(() => {
-    const dontShow = localStorage.getItem('dontShowDisclaimer');
-    if (dontShow === 'true') {
-      setShowSafetyDisclaimer(false);
-      setDontShowDisclaimer(true);
-    } else {
-      setShowSafetyDisclaimer(true);
-    }
-  }, []);
-
-  const handleDontShowAgainChange = (checked: boolean) => {
-    setDontShowDisclaimer(checked);
-    localStorage.setItem('dontShowDisclaimer', checked ? 'true' : 'false');
-  };
 
   // Calculate derived values
   const experienceLevel = useMemo(() => 
@@ -124,15 +106,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Safety Disclaimer Modal */}
-      {showSafetyDisclaimer && (
-        <SafetyDisclaimer 
-          onClose={() => setShowSafetyDisclaimer(false)}
-          onDontShowAgainChange={handleDontShowAgainChange}
-          dontShowAgain={dontShowDisclaimer}
-        />
-      )}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* User Input Section */}
@@ -186,6 +159,13 @@ export default function Home() {
               <p className="text-gray-300 text-sm max-w-3xl">
                 This tool provides guidance only. Always consult with certified instructors, riggers, and manufacturers before making canopy decisions. 
                 Skydiving carries inherent risks. This tool does not replace professional training and judgment.
+              </p>
+              <p className="text-gray-400 text-xs mt-4 max-w-3xl">
+                Information in this tool is based in part on:
+                <br />
+                <a href="https://parachute.nl/wp-content/uploads/2025/06/BVR-bijlage-C-versie-20250602.pdf" target="_blank" rel="noopener noreferrer" className="underline text-blue-300">BVR Indeling Hoofdparachutes 2025</a>
+                <br />
+                <a href="https://parachute.nl/wp-content/uploads/2024/12/BVR-2024-bijlage-B-parachutekeuze-versie-2.pdf" target="_blank" rel="noopener noreferrer" className="underline text-blue-300">BVR Regels voor parachutekeuze 2024</a>
               </p>
             </div>
           </div>
