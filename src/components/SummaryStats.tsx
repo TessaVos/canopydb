@@ -4,7 +4,7 @@ import React from 'react';
 
 interface SummaryStatsProps {
   safeCanopiesCount: number;
-  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   maxSafeWingLoading: number;
 }
 

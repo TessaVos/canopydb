@@ -11,7 +11,7 @@ interface CanopyTileProps {
   onToggleExpand: (canopyId: string) => void;
   showUnsafe?: boolean;
   userExitWeight: number;
-  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   maxSafeWingLoading: number;
   showOnlySafeCanopies?: boolean;
   recentJumps: number;

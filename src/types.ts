@@ -1,9 +1,10 @@
 export interface UserProfile {
   totalJumps: number;
   recentJumps: number;
+  crossbracedJumps: number;
   exitWeight: number;
   weightUnit: 'lbs' | 'kg';
-  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   currentCanopySize: number;
 }
 

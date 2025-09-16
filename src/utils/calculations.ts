@@ -6,22 +6,29 @@ export const calculateWingLoading = (exitWeightLbs: number, canopySize: number):
 };
 
 // Determines experience level based on total and recent jumps
-export const determineExperienceLevel = (totalJumps: number, recentJumps: number = 0): 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' => {
+export const determineExperienceLevel = (totalJumps: number, recentJumps: number = 0, crossbracedJumps = 0): 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro' => {
   // First determine base experience level by total jumps
-  let baseLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  let baseLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   if (totalJumps < 25) baseLevel = 'beginner';
   else if (totalJumps < 100) baseLevel = 'novice';
   else if (totalJumps < 400) baseLevel = 'intermediate';
   else if (totalJumps < 700) baseLevel = 'advanced';
   else if (totalJumps < 1000) baseLevel = 'expert';
-  else baseLevel = 'elite';
+  else if (totalJumps < 1200) baseLevel = 'elite';
+  else baseLevel = 'pro';
   // If beginner, currency doesn't matter
   if (baseLevel === 'beginner') return baseLevel;
   // Check currency requirements for each level
   const requiredCurrency = getRequiredRecentJumps(baseLevel);
+  // Check for pro level special condition
+  if (baseLevel === 'pro' && crossbracedJumps < 200) {
+    // If not enough crossbraced jumps, drop to elite
+    baseLevel = 'elite';
+  }
   // If currency requirements are not met, drop down to appropriate level
   if (recentJumps < requiredCurrency) {
     // Find the highest level where currency requirements are met
+    if (recentJumps >= getRequiredRecentJumps('elite') && totalJumps >= 1000) return 'elite';
     if (recentJumps >= getRequiredRecentJumps('expert') && totalJumps >= 700) return 'expert';
     if (recentJumps >= getRequiredRecentJumps('advanced') && totalJumps >= 400) return 'advanced';
     if (recentJumps >= getRequiredRecentJumps('intermediate') && totalJumps >= 100) return 'intermediate';
@@ -32,11 +39,14 @@ export const determineExperienceLevel = (totalJumps: number, recentJumps: number
 };
 
 // Returns safety level for a given wing loading, experience, and canopy size
-export const getSafetyLevel = (wingLoading: number, experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite', canopySize: number, recentJumps: number): 'safe' | 'caution' | 'dangerous' => {
+export const getSafetyLevel = (wingLoading: number, experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro', canopySize: number, recentJumps: number): 'safe' | 'caution' | 'dangerous' => {
   // First check if canopy size meets minimum requirement
   const minCanopySize = getMinimumCanopySize(experienceLevel);
   if (canopySize < minCanopySize) {
     return 'dangerous';
+  }
+  if (canopySize < minCanopySize + 5) {
+    return 'caution';
   }
   // Then check wing loading as before
   const maxSafe = getMaxWingLoading(experienceLevel, recentJumps);
@@ -46,7 +56,7 @@ export const getSafetyLevel = (wingLoading: number, experienceLevel: 'beginner' 
 };
 
 // Returns max safe wing loading for experience and currency
-export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite', recentJumps: number): number => {
+export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro', recentJumps: number): number => {
   let baseMax: number;
   let requiredRecentJumps: number;
   switch (experienceLevel) {
@@ -71,6 +81,7 @@ export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'inte
       requiredRecentJumps = 75;
       break;
     case 'elite':
+    case 'pro':
       return 999; // No limit for elite/pro level
   }
   // Reduce max wing loading if currency requirements not met
@@ -95,7 +106,7 @@ export const getMaxWingLoading = (experienceLevel: 'beginner' | 'novice' | 'inte
 };
 
 // Returns minimum canopy size for experience level
-export const getMinimumCanopySize = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite'): number => {
+export const getMinimumCanopySize = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro'): number => {
   switch (experienceLevel) {
     case 'beginner':
     case 'novice':
@@ -107,6 +118,7 @@ export const getMinimumCanopySize = (experienceLevel: 'beginner' | 'novice' | 'i
     case 'expert':
       return 118; // 120 - 2 sqft margin
     case 'elite':
+    case 'pro':
       return 0; // No limit
     default:
       return 168; // 170 - 2 sqft margin
@@ -114,7 +126,7 @@ export const getMinimumCanopySize = (experienceLevel: 'beginner' | 'novice' | 'i
 };
 
 // Returns required recent jumps for experience level
-export const getRequiredRecentJumps = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite'): number => {
+export const getRequiredRecentJumps = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro'): number => {
   switch (experienceLevel) {
     case 'beginner':
       return 0;
@@ -128,6 +140,8 @@ export const getRequiredRecentJumps = (experienceLevel: 'beginner' | 'novice' | 
       return 75;
     case 'elite':
       return 100;
+    case 'pro':
+      return 200;
     default:
       return 0;
   }
@@ -142,7 +156,7 @@ export const isCanopyCurrentlyProduced = (canopy: Canopy): boolean => {
 export const canopyMeetsSafetyGuidelines = (
   canopy: Canopy, 
   exitWeightInPounds: number, 
-  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite',
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro',
   maxSafeWingLoading: number,
   recentJumps: number
 ): boolean => {

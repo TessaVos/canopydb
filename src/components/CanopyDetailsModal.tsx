@@ -11,7 +11,7 @@ interface CanopyDetailsModalProps {
   isOpen: boolean;
   onClose: () => void;
   userExitWeight: number;
-  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   maxSafeWingLoading: number;
   recentJumps: number;
 }

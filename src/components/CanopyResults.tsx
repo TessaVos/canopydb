@@ -11,7 +11,7 @@ import NoSafeCanopiesWarning from './NoSafeCanopiesWarning';
 
 interface CanopyResultsProps {
   canopies: Canopy[];
-  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   exitWeightInPounds: number;
   maxSafeWingLoading: number;
   showOnlySafeCanopies?: boolean;

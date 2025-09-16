@@ -13,7 +13,7 @@ const LOCAL_STORAGE_KEY = 'canopydb_userProfile';
 interface UserInputFormProps {
   userProfile: UserProfile;
   setUserProfile: (profile: UserProfile) => void;
-  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   maxSafeWingLoading: number;
   exitWeightInPounds: number;
   currentWingLoading: number;
@@ -39,6 +39,9 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
   const [currentCanopySizeInput, setCurrentCanopySizeInput] = useState<string>(
     userProfile.currentCanopySize === 0 ? '' : userProfile.currentCanopySize.toString()
   );
+  const [crossbracedJumpsInput, setCrossbracedJumpsInput] = useState<string>(
+    userProfile.crossbracedJumps === 0 ? '' : userProfile.crossbracedJumps?.toString() || ''
+  );
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -53,6 +56,7 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
         setTotalJumpsInput(parsed.totalJumps === 0 ? '' : parsed.totalJumps.toString());
         setRecentJumpsInput(parsed.recentJumps === 0 ? '' : parsed.recentJumps.toString());
         setCurrentCanopySizeInput(parsed.currentCanopySize === 0 ? '' : parsed.currentCanopySize.toString());
+        setCrossbracedJumpsInput(parsed.crossbracedJumps === 0 ? '' : parsed.crossbracedJumps?.toString() || '');
       } catch (e) {
         // Ignore parse errors
       }
@@ -145,6 +149,39 @@ const UserInputForm: React.FC<UserInputFormProps> = ({
           />
           <CurrencyWarning show={currencyWarning} />
         </div>
+        {(userProfile.totalJumps >= 1200 && userProfile.recentJumps >= 200) && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Jumps on Crossbraced Canopy (from Elite category)
+            </label>
+            <input
+              type="number"
+              value={crossbracedJumpsInput}
+              onChange={(e) => {
+                const value = e.target.value;
+                setCrossbracedJumpsInput(value);
+                if (value === '') {
+                  return;
+                } else {
+                  const numValue = parseInt(value);
+                  handleInputChange('crossbracedJumps', isNaN(numValue) ? 0 : numValue);
+                }
+              }}
+              onBlur={(e) => {
+                if (e.target.value === '') {
+                  handleInputChange('crossbracedJumps', 0);
+                  setCrossbracedJumpsInput('');
+                }
+              }}
+              min="0"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Enter crossbraced jumps"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              Number of jumps on a crossbraced canopy from the Elite category
+            </p>
+          </div>
+        )}
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">

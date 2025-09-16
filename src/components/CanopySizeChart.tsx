@@ -7,7 +7,7 @@ import { calculateWingLoading, getSafetyLevel } from '../utils/calculations';
 interface CanopySizeChartProps {
   availableSizes: number[];
   userExitWeight: number;
-  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   maxSafeWingLoading: number;
   recentJumps: number;
 }

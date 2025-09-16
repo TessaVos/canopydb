@@ -20,6 +20,7 @@ export default function Home() {
   const [userProfile, setUserProfile] = useState<UserProfile>({
     totalJumps: 0,
     recentJumps: 0,
+    crossbracedJumps: 0,
     exitWeight: 70,
     weightUnit: 'kg',
     experienceLevel: 'beginner',
@@ -50,8 +51,8 @@ export default function Home() {
 
   // Calculate derived values
   const experienceLevel = useMemo(() => 
-    determineExperienceLevel(userProfile.totalJumps, userProfile.recentJumps), 
-    [userProfile.totalJumps, userProfile.recentJumps]
+    determineExperienceLevel(userProfile.totalJumps, userProfile.recentJumps, userProfile.crossbracedJumps), 
+    [userProfile.totalJumps, userProfile.recentJumps, userProfile.crossbracedJumps]
   );
 
   const exitWeightInPounds = useMemo(() => 

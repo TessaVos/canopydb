@@ -12,7 +12,7 @@ interface SizeInfoProps {
   }>;
   availableSizes?: number[];
   userExitWeight: number;
-  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite';
+  userExperienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro';
   isExpanded: boolean;
   onToggleExpand: () => void;
   showOnlySafeCanopies?: boolean;
