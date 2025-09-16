@@ -99,6 +99,57 @@ export const canopiesData: Canopy[] = [
     "category": 1
   },
   {
+    "id": "3dc79652-5b6b-4283-843f-4a5dee54f074",
+    "name": "Solo",
+    "cells": 9,
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [190, 210, 230, 250, 270, 290],
+    "url": "https://www.flyaerodyne.com/canopy-solo.html",
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "cf363041-0ed4-414c-a1de-e813d5ffb735",
+    "name": "Spark",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "76b4f618-0590-4979-8bb6-9790f122949d",
+    "availableSizes": [105, 120, 135, 170, 190, 210, 230],
+    "url": "https://www.flyfirebird.com/fb/sites/default/files/downloads/manuals/spark.pdf",
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "ca985455-d756-43c4-87a7-38e12b54b519",
+    "name": "Skymaster",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b378c1b5-a87c-4271-bdec-c53b84a7d87a",
+    "availableSizes": [170, 185, 200, 230, 260, 290],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "f5e01422-3740-483b-b277-879b6c7e2b71",
+    "name": "Balance",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [170, 190, 210, 230, 260, 280],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "f4c8a620-a4a7-4458-a8d7-69361614279a",
+    "name": "Element",
+    "cells": 9,
+    "firstYearOfProduction": "1996",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [180, 200, 220, 240, 260, 280, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
     "id": "8bc35daf-c7c0-46fb-95c4-a6e58fba086f",
     "name": "Sabre3",
     "cells": 9,
@@ -254,5 +305,25 @@ export const manufacturersData: Manufacturer[] = [
     "country": "United States",
     "shortname": "PA",
     "url": "https://www.precision.nethttps://www.precision.net/"
+  },
+  {
+    "id": "76b4f618-0590-4979-8bb6-9790f122949d",
+    "name": "Firebird",
+    "country": "United States",
+    "shortname": "Firebird",
+    "url": "https://www.flyfirebird.comftfi"
+  },
+  {
+    "id": "b378c1b5-a87c-4271-bdec-c53b84a7d87a",
+    "name": "PISA",
+    "country": "South Africa",
+    "shortname": "PISA",
+  },
+  {
+    "id": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "name": "Paratec",
+    "country": "Germany",
+    "shortname": "Paratec",
+    "url": "https://paratec.de"
   }
 ];
