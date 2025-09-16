@@ -11,7 +11,7 @@ export interface UserProfile {
 export interface Canopy {
   id: string;
   name: string;
-  cells?: string;
+  cells?: number;
   firstYearOfProduction?: string;
   lastYearOfProduction?: string;
   manufacturerId: string;
