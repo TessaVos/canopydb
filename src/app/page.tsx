@@ -161,7 +161,7 @@ export default function Home() {
                 Skydiving carries inherent risks. This tool does not replace professional training and judgment.
               </p>
               <p className="text-gray-400 text-xs mt-4 max-w-3xl">
-                Information in this tool is based in part on:
+                Information in this tool is based on:
                 <br />
                 <a href="https://parachute.nl/wp-content/uploads/2025/06/BVR-bijlage-C-versie-20250602.pdf" target="_blank" rel="noopener noreferrer" className="underline text-blue-300">BVR Indeling Hoofdparachutes 2025</a>
                 <br />
