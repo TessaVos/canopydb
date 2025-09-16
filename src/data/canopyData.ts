@@ -2,6 +2,27 @@ import { Canopy, Manufacturer } from '../types';
 
 export const canopiesData: Canopy[] = [
   {
+    "id": "d0fabb8d-16d0-4f28-aad4-d36c138bea91",
+    "name": "Navigator",
+    "cells": "9",
+    "firstYearOfProduction": "1992",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [200, 220, 240, 260, 280, 300],
+    "url": "https://www.performancedesigns.com/navigator",
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "a0c7d6d6-05d3-4f3d-9dc8-cf21463e42b6",
+    "name": "Silhouette",
+    "cells": "9",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [135, 150, 170, 190, 210, 230, 260],
+    "url": "https://www.performancedesigns.com/silhouette",
+    "crossbraced": false,
+    "category": 1
+  },
+  {
     "id": "8bc35daf-c7c0-46fb-95c4-a6e58fba086f",
     "name": "Sabre3",
     "cells": "9",
@@ -50,13 +71,6 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
     "availableSizes": [90, 96, 104, 111, 117, 124, 132, 140, 150, 168, 188, 210, 230, 250],
     "url": "https://www.flyaerodyne.com/canopy-pilot.html",
-    "links": [
-      {
-        "type": "youtube",
-        "title": "Aerodyne Pilot 188 some Openings & Landings",
-        "id": "WB9qogEb6SI"
-      }
-    ],
     "crossbraced": false,
     "category": 2
   },
