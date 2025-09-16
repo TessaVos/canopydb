@@ -54,6 +54,51 @@ export const canopiesData: Canopy[] = [
     "category": 1
   },
   {
+    "id": "a2e22c3c-fba1-4b31-8dea-152c3e8abc56",
+    "name": "Raven",
+    "cells": 7,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [120, 135, 150, 181, 218, 249, 282],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "a00ec2f5-c2dc-438c-9417-018f1f587f74",
+    "name": "Super Raven",
+    "cells": 7,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [120, 135, 150, 181, 218, 249, 282],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "9367cd73-473c-4366-bb09-93ad3fa1aff7",
+    "name": "Falcon 7",
+    "cells": 7,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [120, 135, 150, 175, 195, 215, 235, 265, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "fd068498-088c-4ee7-b593-2193ebde6ca8",
+    "name": "Falcon 9",
+    "cells": 7,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [120, 135, 150, 175, 195, 215, 235, 265, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "9d648b52-c218-429e-94a6-1c3354afec2e",
+    "name": "Voyager",
+    "cells": 9,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [180, 200, 220, 240, 260, 280, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
     "id": "8bc35daf-c7c0-46fb-95c4-a6e58fba086f",
     "name": "Sabre3",
     "cells": 9,
@@ -202,5 +247,12 @@ export const manufacturersData: Manufacturer[] = [
     "country": "France",
     "shortname": "PDF",
     "url": "https://www.skydive-safety.com/Parachute-Equipment-Parachutes-De-France-Canopies.htm"
+  },
+  {
+    "id": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "name": "Precision Aerodynamics",
+    "country": "United States",
+    "shortname": "PA",
+    "url": "https://www.precision.nethttps://www.precision.net/"
   }
 ];
