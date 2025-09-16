@@ -15,7 +15,7 @@ export interface Canopy {
   firstYearOfProduction?: string;
   lastYearOfProduction?: string;
   manufacturerId: string;
-  availableSizes?: number[]; // Array of all available sizes
+  availableSizes?: number[];
   url?: string;
   links?: Array<{
     type: string;
@@ -23,6 +23,7 @@ export interface Canopy {
     id: string;
   }>;
   crossbraced: boolean;
+  category: 1 | 2 | 3 | 4 | 5 | 6 | 7;
 }
 
 export interface Manufacturer {

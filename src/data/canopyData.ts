@@ -21,7 +21,8 @@ export const canopiesData: Canopy[] = [
         "id": "NsVNNZhQqQ4"
       }
     ],
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 3
   },
   {
     "id": "c1723ad6-0b19-4fec-bb0f-b1df674a989e",
@@ -39,7 +40,8 @@ export const canopiesData: Canopy[] = [
         "id": "OS0lkMLpyTA"
       }
     ],
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 3
   },
   {
     "id": "0e50d9c5-9137-4e47-8ef3-92d13ad53a8c",
@@ -55,7 +57,8 @@ export const canopiesData: Canopy[] = [
         "id": "WB9qogEb6SI"
       }
     ],
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 2
   },
   {
     "id": "9d4a0836-43cb-4337-a04e-cfde3a1edcf0",
@@ -71,7 +74,8 @@ export const canopiesData: Canopy[] = [
         "id": "S0kAdYobGek"
       }
     ],
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 2
   },
   {
     "id": "fd7bc927-eba2-4d05-aeaa-0fde72c67e71",
@@ -80,7 +84,8 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
     "availableSizes": [93, 99, 109, 119, 129, 149],
     "url": "https://www.flyaerodyne.com/karma.html",
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 5
   },
   { 
     "id": "8ddccedd-a5be-41a9-a460-5b0fa918b90a",
@@ -97,7 +102,8 @@ export const canopiesData: Canopy[] = [
         "id": "jDXG3-Rmu3E"
       }
     ],
-    "crossbraced": true
+    "crossbraced": true,
+    "category": 7
   },
   { 
     "id": "59f8ac99-a1a8-4dbc-88f9-e9949498fe86",
@@ -118,7 +124,8 @@ export const canopiesData: Canopy[] = [
         "id": "wqQ7yiuJPDw"
       }
     ],
-    "crossbraced": false
+    "crossbraced": false,
+    "category": 5
   }
 ];
 

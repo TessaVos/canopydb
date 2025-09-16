@@ -30,6 +30,7 @@ export default function Home() {
   const [showOnlyCurrentProduction, setShowOnlyCurrentProduction] = useState(false);
   const [showOnlySafeCanopies, setShowOnlySafeCanopies] = useState(true);
   const [selectedManufacturer, setSelectedManufacturer] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Calculate derived values
   const experienceLevel = useMemo(() => 
@@ -51,6 +52,20 @@ export default function Home() {
     userProfile.currentCanopySize > 0 ? calculateWingLoading(exitWeightInPounds, userProfile.currentCanopySize) : 0,
     [exitWeightInPounds, userProfile.currentCanopySize]
   );
+
+  // Get user's experience category (1-7)
+  const userExperienceCategory = useMemo(() => {
+    const levelMap = {
+      'beginner': 1,
+      'novice': 2,
+      'intermediate': 3,
+      'advanced': 4,
+      'expert': 5,
+      'elite': 6,
+      'pro': 7
+    };
+    return levelMap[experienceLevel];
+  }, [experienceLevel]);
 
   // Filter and sort canopies
   const filteredCanopies = useMemo(() => {
@@ -75,9 +90,20 @@ export default function Home() {
         return false;
       }
 
-      // Safety guidelines filter
-      if (showOnlySafeCanopies && !canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading, userProfile.recentJumps)) {
+      // Category filter
+      if (selectedCategory !== 'all' && canopy.category.toString() !== selectedCategory) {
         return false;
+      }
+
+      // Safety guidelines filter - when enabled, only show canopies at or below user's category
+      if (showOnlySafeCanopies) {
+        if (canopy.category > userExperienceCategory) {
+          return false;
+        }
+        // Also check the existing safety guidelines
+        if (!canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading, userProfile.recentJumps)) {
+          return false;
+        }
       }
 
       // Must have size information
@@ -86,7 +112,7 @@ export default function Home() {
 
     // Sort by name only
     return filtered.sort((a, b) => a.name.localeCompare(b.name));
-  }, [showOnlyCurrentProduction, searchTerm, selectedManufacturer, showOnlySafeCanopies, experienceLevel, exitWeightInPounds]);
+  }, [showOnlyCurrentProduction, searchTerm, selectedManufacturer, selectedCategory, showOnlySafeCanopies, experienceLevel, exitWeightInPounds, userExperienceCategory, maxSafeWingLoading, userProfile.recentJumps]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100">
@@ -125,6 +151,8 @@ export default function Home() {
               setSearchTerm={setSearchTerm}
               selectedManufacturer={selectedManufacturer}
               setSelectedManufacturer={setSelectedManufacturer}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
               showOnlyCurrentProduction={showOnlyCurrentProduction}
               setShowOnlyCurrentProduction={setShowOnlyCurrentProduction}
               showOnlySafeCanopies={showOnlySafeCanopies}

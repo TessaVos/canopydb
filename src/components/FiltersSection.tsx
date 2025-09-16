@@ -7,6 +7,8 @@ interface FiltersSectionProps {
   setSearchTerm: (term: string) => void;
   selectedManufacturer: string;
   setSelectedManufacturer: (id: string) => void;
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
   showOnlyCurrentProduction: boolean;
   setShowOnlyCurrentProduction: (checked: boolean) => void;
   showOnlySafeCanopies: boolean;
@@ -19,12 +21,24 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
   setSearchTerm,
   selectedManufacturer,
   setSelectedManufacturer,
+  selectedCategory,
+  setSelectedCategory,
   showOnlyCurrentProduction,
   setShowOnlyCurrentProduction,
   showOnlySafeCanopies,
   setShowOnlySafeCanopies,
   manufacturersData
 }) => {
+  const categoryLabels = {
+    '1': 'Category 1 (Beginner)',
+    '2': 'Category 2 (Novice)',
+    '3': 'Category 3 (Intermediate)',
+    '4': 'Category 4 (Advanced)',
+    '5': 'Category 5 (Expert)',
+    '6': 'Category 6 (Elite)',
+    '7': 'Category 7 (Pro)'
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -66,6 +80,24 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
                   {manufacturer.name}
                 </option>
               ))}
+          </select>
+        </div>
+        {/* Category Filter */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Skill Level Category
+          </label>
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="all">All Categories</option>
+            {Object.entries(categoryLabels).map(([value, label]) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
           </select>
         </div>
         {/* Production Status */}
