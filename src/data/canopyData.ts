@@ -140,12 +140,191 @@ export const canopiesData: Canopy[] = [
     "category": 1
   },
   {
+    "id": "c9a6d2f2-83d6-4ef0-83eb-3f3f3fbaec0d",
+    "name": "Maverick",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [200],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "761945a5-8c75-42ea-ac40-d15c70281585",
+    "name": "Startrac",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [245, 265, 290],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "ecf17c51-4a63-4ba1-bdf9-839d23debe62",
+    "name": "Fury",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [200],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "3fe96f23-71a0-4ab1-aee1-2cfe7afc88e6",
+    "name": "Firelite",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [175],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "dcec712c-0662-4138-800e-7b933b4b0c09",
+    "name": "Cricket",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [145],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "0def664f-0db7-4b52-83d2-39a8e6bf50f0",
+    "name": "Sharpchuter",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [245],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "85e7f4b8-b12a-4192-8c98-2e31b4567c42",
+    "name": "Raider",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [220],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "29fc9227-525d-4adc-927d-6ae422328dc3",
+    "name": "Maverone",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [250],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "1dc58111-eedc-4b5e-bd2b-3f5fceffc8d2",
+    "name": "Clipper",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [195],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "472444b8-ec1d-4808-8f78-4a3afed2931e",
+    "name": "Manta",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [290],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "7b932a96-dd67-4089-9fef-2401768d0b70",
+    "name": "Manta ZP",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [185, 200, 230, 260, 290, 320],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
     "id": "f4c8a620-a4a7-4458-a8d7-69361614279a",
     "name": "Element",
     "cells": 9,
     "firstYearOfProduction": "1996",
     "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
     "availableSizes": [180, 200, 220, 240, 260, 280, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "ce560fb8-e3b7-4471-a158-f2016e820d84",
+    "name": "Icarus Student ZP-7",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [169, 189, 209, 229, 249, 269, 289],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "7a0d9e0e-731c-427c-93cd-0e45dab00f38",
+    "name": "Icarus Student",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "e6175333-b0e7-4467-b3a6-271b5777ad6d",
+    "name": "Equinox",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [189, 199, 209, 219, 229, 239, 249, 259, 279, 289, 299],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "b2f7f199-725f-4c97-b1fc-755cb3b55ce9",
+    "name": "Zepo Student",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "ea49a732-2153-4d2c-a9ce-94360f37c226",
+    "name": "ZP",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "9f132aaf-92c0-4140-a193-cbcf863c2c09",
+    "name": "Eagle 7",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "3a913288-da22-4493-9dd4-f86989b18419",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 1
+  },
+  {
+    "id": "308503b6-be18-456d-a50a-b964ba266397",
+    "name": "Eagle 9",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "3a913288-da22-4493-9dd4-f86989b18419",
+    "availableSizes": [110, 130, 150, 170, 190, 210, 230, 250, 270, 290, 310, 330],
     "crossbraced": false,
     "category": 1
   },
@@ -325,5 +504,30 @@ export const manufacturersData: Manufacturer[] = [
     "country": "Germany",
     "shortname": "Paratec",
     "url": "https://paratec.de"
+  },
+  {
+    "id": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "name": "Flight Concepts",
+    "country": "United States",
+    "shortname": "Flight Concepts",
+  },
+  {
+    "id": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "name": "Icarus",
+    "country": "United States",
+    "shortname": "Icarus",
+    "url": "https://icarusworld.net"
+  },
+  {
+    "id": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "name": "Parachute Systems",
+    "country": "South Africa",
+    "shortname": "PS"
+  },
+  {
+    "id": "3a913288-da22-4493-9dd4-f86989b18419",
+    "name": "North American Aerodynamics, Inc",
+    "country": "United States",
+    "shortname": "NAA"
   }
 ];
