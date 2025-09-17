@@ -343,7 +343,7 @@ export const canopiesData: Canopy[] = [
   {
     "id": "86cdc095-3445-4962-8621-c708f299112e",
     "name": "Spectre",
-    "cells": 9,
+    "cells": 7,
     "firstYearOfProduction": "1997",
     "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
     "availableSizes": [97, 107, 120, 135, 150, 170, 190, 210, 230],
@@ -360,6 +360,38 @@ export const canopiesData: Canopy[] = [
         "id": "_xmA9O1WGb4"
       }
     ],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "ad488137-3e9b-48e5-9459-e8e57de4a64a",
+    "name": "Pulse",
+    "cells": 9,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [107, 120, 135, 150, 170, 190, 210, 230, 260],
+    "url": "https://www.performancedesigns.com/pulse",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "The PULSE by Performance Designs",
+        "id": "kZu6wrhDA90"
+      },
+      {
+        "type": "youtube",
+        "title": "The Pulse",
+        "id": "lWM-r67r-9Y"
+      }
+    ],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "58045b17-92b5-470c-b516-c8fe75096ce0",
+    "name": "Zero",
+    "cells": 7,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325],
+    "url": "https://www.performancedesigns.com/zero",
     "crossbraced": false,
     "category": 2
   },
