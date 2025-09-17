@@ -329,6 +329,41 @@ export const canopiesData: Canopy[] = [
     "category": 1
   },
   {
+    "id": "0a71327d-81f3-4407-ada4-81a0c915ca3b",
+    "name": "Sabre",
+    "cells": 9,
+    "firstYearOfProduction": "1990",
+    "lastYearOfProduction": "2001",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [89, 97, 107, 120, 135, 150, 170, 190, 210, 230],
+    "url": "https://www.performancedesigns.com/legacy-products",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "86cdc095-3445-4962-8621-c708f299112e",
+    "name": "Spectre",
+    "cells": 9,
+    "firstYearOfProduction": "1997",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [97, 107, 120, 135, 150, 170, 190, 210, 230],
+    "url": "https://www.performancedesigns.com/spectre",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "PD Spectre 190 WL1.1 Openings 116-127",
+        "id": "CwcmGeKHqus"
+      },
+      {
+        "type": "youtube",
+        "title": "Packing a Spectre Parachute",
+        "id": "_xmA9O1WGb4"
+      }
+    ],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
     "id": "8bc35daf-c7c0-46fb-95c4-a6e58fba086f",
     "name": "Sabre3",
     "cells": 9,
