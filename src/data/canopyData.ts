@@ -261,7 +261,7 @@ export const canopiesData: Canopy[] = [
   },
   {
     "id": "ce560fb8-e3b7-4471-a158-f2016e820d84",
-    "name": "Icarus Student ZP-7",
+    "name": "Student ZP-7",
     "cells": 7,
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
@@ -271,7 +271,7 @@ export const canopiesData: Canopy[] = [
   },
   {
     "id": "7a0d9e0e-731c-427c-93cd-0e45dab00f38",
-    "name": "Icarus Student",
+    "name": "Student",
     "cells": 9,
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
@@ -386,12 +386,185 @@ export const canopiesData: Canopy[] = [
     "category": 2
   },
   {
+    "id": "1d1fd395-cec0-429f-95c2-573306829f42",
+    "name": "Electra",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [130, 150, 170, 190, 210],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "7ab4a67b-c44e-4644-aaa3-f5f8daf92602",
+    "name": "Merit",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [130, 150, 170, 190, 210],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "3483e6ef-a130-49b1-96ed-54e928754cf3",
+    "name": "Synergy",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [98, 108, 120, 135, 150, 170, 190, 210, 230],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
     "id": "58045b17-92b5-470c-b516-c8fe75096ce0",
     "name": "Zero",
     "cells": 7,
     "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
     "availableSizes": [205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325],
     "url": "https://www.performancedesigns.com/zero",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "0e50d9c5-9137-4e47-8ef3-92d13ad53a8c",
+    "name": "Pilot",
+    "cells": 9,
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [90, 96, 104, 111, 117, 124, 132, 140, 150, 168, 188, 210, 230, 250],
+    "url": "https://www.flyaerodyne.com/canopy-pilot.html",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "9d4a0836-43cb-4337-a04e-cfde3a1edcf0",
+    "name": "Pilot 7",
+    "cells": 7,
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [117, 127, 137, 147, 167, 187, 207, 227, 247, 277],
+    "url": "https://www.flyaerodyne.com/canopy-pilot-7.html",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Aerodyne Pilot7 ZPX 147sqf - Wingsuit Openings",
+        "id": "S0kAdYobGek"
+      }
+    ],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "316bdeb0-8af7-4718-8cc7-02ce57a0c6bd",
+    "name": "Triathlon",
+    "cells": 7,
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [99, 120, 135, 150, 160, 175, 190, 210, 220, 240, 260],
+    "url": "https://www.flyaerodyne.com/canopy-triathlon.html",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "68c25e0d-7456-457c-b9e1-e88b67cd0f81",
+    "name": "Super 7",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [120, 135, 150, 170, 190],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "b789df77-1d98-465e-a315-f1b52961101f",
+    "name": "Quadra V-Tec",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [150, 170, 190],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "493ae8e3-96b7-4867-90ef-8d6deb6211ff",
+    "name": "Omni",
+    "cells": 7,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [99, 109, 119, 129, 139, 149, 169, 189, 209, 229],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "ef4121f5-c17a-4a91-be77-16a50673cd91",
+    "name": "Cayenne",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "bb10b2fb-570c-4d70-8b42-c3e72fb616c1",
+    "availableSizes": [120, 135, 150, 170, 190, 210, 240],
+    "url": "https://www.ffp.asso.fr/wp-content/uploads/2004/06/Voile_principale_CAYENNE_edition06-2004.pdf",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "5bd86d5b-573d-4622-abfb-ceb64630cb20",
+    "name": "Parafoil",
+    "cells": 7,
+    "firstYearOfProduction": "2000",
+    "lastYearOfProduction": "unknown",
+    "manufacturerId": "3a913288-da22-4493-9dd4-f86989b18419",
+    "availableSizes": [220, 230, 240, 250, 260, 270, 280, 290, 300],
+    "url": "https://www.ffp.asso.fr/wp-content/uploads/2004/06/Voile_principale_CAYENNE_edition06-2004.pdf",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "73784990-a5d6-461d-b900-9cec32dbc365",
+    "name": "Classic",
+    "cells": 7,
+    "manufacturerId": "d1e3c5f4-a305-43ef-a48d-e195775273d3",
+    "availableSizes": [218, 238, 259, 270, 281, 304, 328],
+    "url": "https://paraorg.dfv.aero/uploads/manual_eiff_classic.pdf",
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "b69beb57-676e-4ac1-adc2-49663c4d3417",
+    "name": "Turbo-Z",
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "6066274f-b5b3-46d3-aa72-b9035f9ec9fe",
+    "availableSizes": [125, 145, 185, 205],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "8815d95e-7b11-4be9-a288-7b2a8fd661e9",
+    "name": "Turbo-ZX",
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "6066274f-b5b3-46d3-aa72-b9035f9ec9fe",
+    "availableSizes": [225, 285],
+    "crossbraced": false,
+    "category": 2
+  },
+  {
+    "id": "25b89695-375c-492f-817a-632dc818e318",
+    "name": "Commodore",
+    "cells": 9,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [190, 210, 230, 250, 270, 290, 310],
+    "crossbraced": false,
+    "category": 2
+  },
+  { 
+    "id": "68e685b6-24e9-46d7-869d-1e7802b13e1d",
+    "name": "Air",
+    "cells": 9,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [169, 189, 209, 229, 249, 269, 299],
+    "url": "https://www.jyro.com/product/air/?v=1a13105b7e4e",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "JYRO AIR | The Modern Student Canopy",
+        "id": "-HChrnQAJDQ"
+      }
+    ],
     "crossbraced": false,
     "category": 2
   },
@@ -436,33 +609,6 @@ export const canopiesData: Canopy[] = [
     ],
     "crossbraced": false,
     "category": 3
-  },
-  {
-    "id": "0e50d9c5-9137-4e47-8ef3-92d13ad53a8c",
-    "name": "Pilot",
-    "cells": 9,
-    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
-    "availableSizes": [90, 96, 104, 111, 117, 124, 132, 140, 150, 168, 188, 210, 230, 250],
-    "url": "https://www.flyaerodyne.com/canopy-pilot.html",
-    "crossbraced": false,
-    "category": 2
-  },
-  {
-    "id": "9d4a0836-43cb-4337-a04e-cfde3a1edcf0",
-    "name": "Pilot 7",
-    "cells": 7,
-    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
-    "availableSizes": [117, 127, 137, 147, 167, 187, 207, 227, 247, 277],
-    "url": "https://www.flyaerodyne.com/canopy-pilot-7.html",
-    "links": [
-      {
-        "type": "youtube",
-        "title": "Aerodyne Pilot7 ZPX 147sqf - Wingsuit Openings",
-        "id": "S0kAdYobGek"
-      }
-    ],
-    "crossbraced": false,
-    "category": 2
   },
   {
     "id": "fd7bc927-eba2-4d05-aeaa-0fde72c67e71",
@@ -550,7 +696,7 @@ export const manufacturersData: Manufacturer[] = [
     "name": "Precision Aerodynamics",
     "country": "United States",
     "shortname": "PA",
-    "url": "https://www.precision.nethttps://www.precision.net/"
+    "url": "https://www.precision.net"
   },
   {
     "id": "76b4f618-0590-4979-8bb6-9790f122949d",
@@ -596,5 +742,32 @@ export const manufacturersData: Manufacturer[] = [
     "name": "North American Aerodynamics, Inc",
     "country": "United States",
     "shortname": "NAA"
+  },
+  {
+    "id": "bb10b2fb-570c-4d70-8b42-c3e72fb616c1",
+    "name": "Performance variable",
+    "country": "Germany",
+    "shortname": "PV"
+  },
+  {
+    "id": "d1e3c5f4-a305-43ef-a48d-e195775273d3",
+    "name": "EIFF",
+    "country": "United States",
+    "shortname": "EIFF",
+    "url": "https://eiff.com/index.htm"
+  },
+  {
+    "id": "6066274f-b5b3-46d3-aa72-b9035f9ec9fe",
+    "name": "Airborne Systems / Para-Flite",
+    "country": "United States",
+    "shortname": "Airborne Systems",
+    "url": "https://airborne-sys.com"
+  },
+  {
+    "id": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "name": "Skylark Parachutes",
+    "country": "Ukraine",
+    "shortname": "Skylark Parachutes",
+    "url": "https://skylarkparachutes.com"
   }
 ];
