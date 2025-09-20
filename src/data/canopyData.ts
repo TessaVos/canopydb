@@ -611,6 +611,126 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "f8879ac5-4950-48e4-b81e-f3b6ada7c77c",
+    "name": "Lightning",
+    "cells": 7,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [113, 126, 143, 160, 176, 193, 218],
+    "url": "https://www.performancedesigns.com/lightning",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "045c5428-4ca4-43fc-ab1e-4e4b422c536c",
+    "name": "Storm",
+    "cells": 7,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [97, 107, 120, 135, 150, 170, 190, 210, 230],
+    "url": "https://www.performancedesigns.com/storm",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Storm",
+        "id": "1UzQcd6dNAg"
+      }
+    ],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "04b65f36-1b7c-4a6b-8d4e-286340f6c767",
+    "name": "Horizon",
+    "cells": 7,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [120, 135, 150, 170, 190],
+    "url": "https://www.performancedesigns.com/horizon",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Horizon",
+        "id": "a9wbmmY0IdI"
+      }
+    ],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "38a5471e-14c1-46a4-8426-bb460719cef1",
+    "name": "Safire 3",
+    "cells": 9,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [99, 109, 119, 129, 139, 149, 159, 169, 179, 189, 199, 229],
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Safire 3 Review | Luca Sala",
+        "id": "ylp9WQHosFA"
+      }
+    ],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "b5e6b7fc-d4af-44e9-9361-2fd8acf3e8ea",
+    "name": "Helium",
+    "cells": 9,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [129, 139, 149, 169, 189, 209, 229],
+    "url": "https://www.jyro.com/product/helium",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "JYRO | Helium",
+        "id": "ghblC8Mn6eQ"
+      },
+      {
+        "type": "youtube",
+        "title": "JYRO Helium | The Features",
+        "id": "Jlf_fZha0dE"
+      }
+    ],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "48bdc198-96c6-4df8-b24f-3dd6b82adffa",
+    "name": "Stiletto",
+    "cells": 9,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [89, 97, 107, 120, 135, 150, 170, 190],
+    "url": "https://www.performancedesigns.com/stiletto",
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "acd6d6b6-bddf-48d1-ad44-42bc16b2a529",
+    "name": "Katana",
+    "cells": 9,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [83, 89, 97, 107, 120, 135, 150, 170],
+    "url": "https://www.performancedesigns.com/katana",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Bria flying her Performance Designs Katana | SA Skydiving | Adelaide, South Australia",
+        "id": "xIDxK2QNJZo"
+      }
+    ],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "fef1e6f5-ae9e-494f-9f6d-ac9584c5befd",
+    "name": "Vengeance",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [89, 97, 107, 120, 135, 150, 170],
+    "url": "https://www.performancedesigns.com/legacy-products",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
     "id": "fd7bc927-eba2-4d05-aeaa-0fde72c67e71",
     "name": "Karma",
     "cells": 9,
@@ -619,24 +739,6 @@ export const canopiesData: Canopy[] = [
     "url": "https://www.flyaerodyne.com/karma.html",
     "crossbraced": false,
     "category": 5
-  },
-  { 
-    "id": "8ddccedd-a5be-41a9-a460-5b0fa918b90a",
-    "name": "Petra",
-    "cells": 9,
-    "firstYearOfProduction": "2012",
-    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
-    "availableSizes": [55, 57, 61, 65, 71, 77, 83, 89],
-    "url": "https://www.jyro.com/product/petra",
-    "links": [
-      {
-        "type": "youtube",
-        "title": "Petra | JYRO",
-        "id": "jDXG3-Rmu3E"
-      }
-    ],
-    "crossbraced": true,
-    "category": 7
   },
   { 
     "id": "59f8ac99-a1a8-4dbc-88f9-e9949498fe86",
@@ -659,7 +761,67 @@ export const canopiesData: Canopy[] = [
     ],
     "crossbraced": false,
     "category": 5
-  }
+  },
+  {
+    "id": "1067d6d8-239f-452e-b012-f35a74459f1b",
+    "name": "Velocity",
+    "cells": 21,
+    "firstYearOfProduction": "1998",
+    "lastYearOfProduction": "2020",
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [75, 79, 84, 90, 96, 103, 111, 120],
+    "url": "https://www.performancedesigns.com/legacy-products",
+    "crossbraced": true,
+    "category": 6
+  },
+  {
+    "id": "bb48e818-00fa-4188-88f8-00bed880e507",
+    "name": "Comp Velocity",
+    "cells": 21,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "availableSizes": [71, 75, 79, 84, 90, 96, 103, 111],
+    "url": "https://www.performancedesigns.com/compvelocity",
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "8ddccedd-a5be-41a9-a460-5b0fa918b90a",
+    "name": "Petra",
+    "cells": 27,
+    "firstYearOfProduction": "2012",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [55, 57, 61, 65, 71, 77, 83, 89],
+    "url": "https://www.jyro.com/product/petra",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Petra | JYRO",
+        "id": "jDXG3-Rmu3E"
+      }
+    ],
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "d17ee71d-764a-44c3-9005-148564c7285a",
+    "name": "Leia",
+    "cells": 21,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [59, 61, 65, 69, 77, 83, 89, 99],
+    "url": "https://www.jyro.com/product/leia",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "22d52f2c-aabe-4f67-8b5a-03f50591b7b7",
+    "name": "SLeia",
+    "cells": 7,
+    "firstYearOfProduction": "2018",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [],
+    "crossbraced": true,
+    "category": 7
+  },
 ];
 
 export const manufacturersData: Manufacturer[] = [
