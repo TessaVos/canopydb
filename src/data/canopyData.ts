@@ -713,6 +713,27 @@ export const canopiesData: Canopy[] = [
     "category": 4
   },
   {
+    "id": "54caaa9f-03de-4044-b5ce-5e0c01b413c6",
+    "name": "Crossfire 2",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [89, 99, 109, 119, 129, 139, 149, 169, 189],
+    "url": "https://icarusworld.net/product-category/crossfire-2",
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "8fabbbbb-15d1-4cd0-b1f6-7ee9a2dadecf",
+    "name": "XFire",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [75, 83, 92, 102, 113, 124, 138, 153, 168],
+    "url": "https://icarusworld.net/product-category/canopies/x-fire",
+    "crossbraced": false,
+    "category": 4
+  },
+  {
     "id": "acd6d6b6-bddf-48d1-ad44-42bc16b2a529",
     "name": "Katana",
     "cells": 9,
@@ -943,6 +964,16 @@ export const canopiesData: Canopy[] = [
     "firstYearOfProduction": "2018",
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [],
+    "crossbraced": true,
+    "category": 7
+  },
+  {
+    "id": "493c940e-950a-41c0-bd33-5bc7a46c0a29",
+    "name": "GT-R",
+    "cells": 21,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [67, 71, 75, 79, 84, 90, 96, 103],
+    "url": "https://icarusworld.net/product-category/canopies/gtr",
     "crossbraced": true,
     "category": 7
   },
