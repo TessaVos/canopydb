@@ -693,6 +693,16 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "d7a43c3e-5c12-4cbe-bbb0-c8d3cdb977eb",
+    "name": "Fusion",
+    "cells": 9,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [98, 108, 120, 135, 150, 170, 190, 210, 230],
+    "url": "https://www.precision.net/fusion-m",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "48bdc198-96c6-4df8-b24f-3dd6b82adffa",
     "name": "Stiletto",
     "cells": 9,
@@ -838,6 +848,24 @@ export const canopiesData: Canopy[] = [
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "2be2acbd-500c-4ac4-92f2-61c74ceb8b48",
+    "name": "Xaos-21",
+    "cells": 21,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [68, 78, 88, 98, 108, 120, 135],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "ee1873b1-a3f1-43a1-8e60-1aacb7d83a7e",
+    "name": "Xaos-27",
+    "cells": 27,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [58, 68, 78, 88, 98, 108, 118],
     "crossbraced": true,
     "category": 6
   },
