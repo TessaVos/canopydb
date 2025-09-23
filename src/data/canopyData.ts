@@ -785,6 +785,102 @@ export const canopiesData: Canopy[] = [
     "category": 6
   },
   { 
+    "id": "a6bee739-2cbb-4052-90fb-ea8b8116ae20",
+    "name": "JFX2",
+    "cells": 21,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [69, 73, 77, 81, 89, 99, 109, 119],
+    "url": "https://www.jyro.com/product/jfx-2",
+    "links": [
+      {
+        "type": "youtube",
+        "title": "JFX 2 | Icarus Canopies NZ",
+        "id": "yveR8ZX0YPI"
+      }
+    ],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "8cb87138-18d7-4211-b103-13139c0d0f3a",
+    "name": "Deadalus JVX",
+    "cells": 27,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "fb0c38b8-24a8-46c8-b9b1-d84b86882009",
+    "name": "Deadalus JFX",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "fc874bf4-7afe-4c64-baf6-61f3a16c3141",
+    "name": "Extreme FX",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "a95975e5-594b-42c8-8415-fba3e6532f1e",
+    "name": "Extreme VX",
+    "cells": 27,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "e04f6dd0-0076-402e-85ce-eeb2800bd3c0",
+    "name": "Peregrine",
+    "cells": 9,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "url": "https://www.performancedesigns.com/peregrine",
+    "availableSizes": [71, 64, 67, 71, 75, 79, 84, 90],
+    "links": [
+      {
+        "type": "youtube",
+        "title": "PD Peregrine High Performance Flock",
+        "id": "duJlqM6HaDQ"
+      }
+    ],
+    "crossbraced": false,
+    "category": 7
+  },
+  { 
+    "id": "fb4dbd09-249a-4973-89ea-da15cd43df06",
+    "name": "Valkyrie",
+    "cells": 21,
+    "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
+    "url": "https://www.performancedesigns.com/valkyrie",
+    "availableSizes": [67, 71, 75, 79, 84,  90, 96, 103, 111],
+    "links": [
+      {
+        "type": "youtube",
+        "title": "Performance Designs Valkyrie",
+        "id": "LJr70PKbgOE"
+      },
+      {
+        "type": "youtube",
+        "title": "VALKYRIE by Performance Designs",
+        "id": "IbuMfeIrMUY"
+      }
+    ],
+    "crossbraced": false,
+    "category": 7
+  },
+  { 
     "id": "8ddccedd-a5be-41a9-a460-5b0fa918b90a",
     "name": "Petra",
     "cells": 27,
