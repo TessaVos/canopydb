@@ -713,23 +713,12 @@ export const canopiesData: Canopy[] = [
     "category": 4
   },
   {
-    "id": "54caaa9f-03de-4044-b5ce-5e0c01b413c6",
-    "name": "Crossfire 2",
+    "id": "38ded39c-d1f4-4a8b-97ec-af19e3f43ae7",
+    "name": "Scorpion",
     "cells": 9,
-    "lastYearOfProduction": "Unknown",
-    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
-    "availableSizes": [89, 99, 109, 119, 129, 139, 149, 169, 189],
-    "url": "https://icarusworld.net/product-category/crossfire-2",
-    "crossbraced": false,
-    "category": 4
-  },
-  {
-    "id": "8fabbbbb-15d1-4cd0-b1f6-7ee9a2dadecf",
-    "name": "XFire",
-    "cells": 9,
-    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
-    "availableSizes": [75, 83, 92, 102, 113, 124, 138, 153, 168],
-    "url": "https://icarusworld.net/product-category/canopies/x-fire",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [86, 97, 107, 120, 135, 150, 170, 190],
+    "url": "https://paratec.de/product/scorpion/",
     "crossbraced": false,
     "category": 4
   },
@@ -748,6 +737,37 @@ export const canopiesData: Canopy[] = [
       }
     ],
     "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "8fabbbbb-15d1-4cd0-b1f6-7ee9a2dadecf",
+    "name": "XFire",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [75, 83, 92, 102, 113, 124, 138, 153, 168],
+    "url": "https://icarusworld.net/product-category/canopies/x-fire",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "54caaa9f-03de-4044-b5ce-5e0c01b413c6",
+    "name": "Crossfire 2",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [89, 99, 109, 119, 129, 139, 149, 169, 189],
+    "url": "https://icarusworld.net/product-category/crossfire-2",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "4e56bd2f-2f23-4748-bf71-c8167772e37d",
+    "name": "Matrix 2",
+    "cells": 15,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [],
+    "crossbraced": true,
     "category": 5
   },
   {
@@ -974,6 +994,16 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
     "availableSizes": [67, 71, 75, 79, 84, 90, 96, 103],
     "url": "https://icarusworld.net/product-category/canopies/gtr",
+    "crossbraced": true,
+    "category": 7
+  },
+  {
+    "id": "2697583c-e439-4df7-aed6-4f3937ab60f4",
+    "name": "XTC",
+    "cells": 9,
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [74, 79, 84, 89, 94, 99, 104, 109],
+    "url": "https://paratec.de/product/xtc",
     "crossbraced": true,
     "category": 7
   },
