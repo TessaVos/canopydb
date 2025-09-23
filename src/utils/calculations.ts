@@ -172,3 +172,17 @@ export const canopyMeetsSafetyGuidelines = (
   }
   return false;
 };
+
+// Returns the category number (1-7) for a given experience level
+export const getCategoryForExperienceLevel = (experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro'): number => {
+  const levelMap: { [key: string]: number } = {
+    'beginner': 1,
+    'novice': 2,
+    'intermediate': 3,
+    'advanced': 4,
+    'expert': 5,
+    'elite': 6,
+    'pro': 7
+  };
+  return levelMap[experienceLevel];
+}

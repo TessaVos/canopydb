@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
 import { Canopy, UserProfile } from '../types';
-import { calculateWingLoading, getSafetyLevel } from '../utils/calculations';
+import { calculateWingLoading, getCategoryForExperienceLevel, getSafetyLevel } from '../utils/calculations';
 import { manufacturersData } from '../data/canopyData';
 import CanopyTile from './CanopyTile';
 import SummaryStats from './SummaryStats';
@@ -39,7 +39,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size, recentJumps);
         
         // When safety filter is active, only include non-dangerous sizes
-        if (showOnlySafeCanopies && safetyLevel === 'dangerous') {
+        if ((showOnlySafeCanopies && safetyLevel === 'dangerous') || canopy.category > getCategoryForExperienceLevel(experienceLevel)) {
           continue;
         }
         
