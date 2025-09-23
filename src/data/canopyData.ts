@@ -723,6 +723,16 @@ export const canopiesData: Canopy[] = [
     "category": 4
   },
   {
+    "id": "d192f851-4f7d-4d7d-86e2-5f10ba12020a",
+    "name": "Crossfire",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "lastYearOfProduction": "Unknown",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
     "id": "acd6d6b6-bddf-48d1-ad44-42bc16b2a529",
     "name": "Katana",
     "cells": 9,
@@ -1004,6 +1014,16 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
     "availableSizes": [74, 79, 84, 89, 94, 99, 104, 109],
     "url": "https://paratec.de/product/xtc",
+    "crossbraced": true,
+    "category": 7
+  },
+  {
+    "id": "2696c781-ca5d-49c7-8c48-b3c6afc3775a",
+    "name": "Scirocco",
+    "cells": 30,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [64, 68, 72, 77, 82, 87, 93, 99, 106, 114, 124],
+    "url": "https://skylarkparachutes.com/scirocco",
     "crossbraced": true,
     "category": 7
   },
