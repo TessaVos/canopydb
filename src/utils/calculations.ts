@@ -40,7 +40,12 @@ export const determineExperienceLevel = (totalJumps: number, recentJumps: number
 
 // Returns safety level for a given wing loading, experience, and canopy size
 export const getSafetyLevel = (wingLoading: number, experienceLevel: 'beginner' | 'novice' | 'intermediate' | 'advanced' | 'expert' | 'elite' | 'pro', canopySize: number, recentJumps: number): 'safe' | 'caution' | 'dangerous' => {
-  // First check if canopy size meets minimum requirement
+  // Check wing loading
+  const maxSafe = getMaxWingLoading(experienceLevel, recentJumps);
+  if (wingLoading <= maxSafe * 0.9) return 'safe';
+  if (wingLoading <= maxSafe) return 'caution';
+  if (wingLoading > maxSafe) return 'dangerous';
+  // Check if canopy size meets minimum requirement
   const minCanopySize = getMinimumCanopySize(experienceLevel);
   if (canopySize < minCanopySize) {
     return 'dangerous';
@@ -48,10 +53,6 @@ export const getSafetyLevel = (wingLoading: number, experienceLevel: 'beginner' 
   if (canopySize < minCanopySize + 5) {
     return 'caution';
   }
-  // Then check wing loading as before
-  const maxSafe = getMaxWingLoading(experienceLevel, recentJumps);
-  if (wingLoading <= maxSafe * 0.9) return 'safe';
-  if (wingLoading <= maxSafe) return 'caution';
   return 'dangerous';
 };
 
