@@ -621,6 +621,46 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "16532423-246e-48f9-96d4-26edfabf5a01",
+    "name": "Skipper",
+    "cells": 7,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [110, 120, 130, 140, 150, 160, 170, 190],
+    "url": "https://skylarkparachutes.com/skipper",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "1c8771df-501b-45c5-a73e-6854565d5633",
+    "name": "Skipper EVO",
+    "cells": 7,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [95, 105, 115, 125, 135, 145, 155, 165, 185],
+    "url": "https://skylarkparachutes.com/skipper-evo",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "7ec3714e-90d9-4e36-b584-7e4b34d4fb77",
+    "name": "Magellan",
+    "cells": 9,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [100, 110, 120, 130, 140, 150, 160, 170, 190],
+    "url": "https://skylarkparachutes.com/magellan",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "5c91ba5d-57cd-41de-9fb9-4d94c849fb02",
+    "name": "Magellan EVO",
+    "cells": 9,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [95, 105, 115, 125, 135, 145, 155, 165, 185],
+    "url": "https://skylarkparachutes.com/magellan-evo-2",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "045c5428-4ca4-43fc-ab1e-4e4b422c536c",
     "name": "Storm",
     "cells": 7,
@@ -671,6 +711,62 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "2051a6ad-f725-46c9-a0a0-552b32b4409f",
+    "name": "Kraken",
+    "cells": 7,
+    "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
+    "availableSizes": [119, 129, 139, 149, 159, 169, 189],
+    "links": [
+      {
+        "type": "youtube",
+        "title": " The Kraken | JYRO",
+        "id": "IgqhuUYYZbE"
+      }
+    ],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "8ed97db5-1ca0-431c-9253-f3fdffa3745e",
+    "name": "Safire 2",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [99, 109, 119, 129, 139, 149, 169, 189, 209, 219, 229, 239],
+    "url": "https://icarusworld.net/product-category/safire-2",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "4b09cc1b-e746-4aed-8dd5-d519f7c21f5e",
+    "name": "S-Fire",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [99, 109, 119, 129, 139, 149, 169, 189, 209, 229, 249],
+    "url": "https://icarusworld.net/product-category/sfire",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "50acfdb3-887a-43f1-b2a5-38e42701455d",
+    "name": "OM7",
+    "cells": 7,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [119, 129, 149, 169, 189],
+    "url": "https://icarusworld.net/product-category/canopies/om",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "892f3af5-1b73-49e0-9853-0f1cb5b19b5e",
+    "name": "Sky",
+    "cells": 9,
+    "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
+    "availableSizes": [149, 169, 189, 209],
+    "url": "https://icarusworld.net/product-category/canopies/sky",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "b5e6b7fc-d4af-44e9-9361-2fd8acf3e8ea",
     "name": "Helium",
     "cells": 9,
@@ -703,12 +799,73 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "a6d26fee-5dff-4e46-ba59-8a74b4ce67f7",
+    "name": "Faqtor",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [97, 110, 120, 135, 150],
+    "url": "https://paraorg.dfv.aero/uploads/manual_paratec_faqtor.pdf",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "21af0a1e-ded5-45aa-9a6f-0399ee7ce7ac",
+    "name": "NRG",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "48bdc198-96c6-4df8-b24f-3dd6b82adffa",
     "name": "Stiletto",
     "cells": 9,
     "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
     "availableSizes": [89, 97, 107, 120, 135, 150, 170, 190],
     "url": "https://www.performancedesigns.com/stiletto",
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "e541e9a1-1c9e-480d-8660-8d031e37fbbc",
+    "name": "Vision",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "e141078f-47cb-4ff8-a76e-b5c3fd94512f",
+    "name": "Diablo",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "e633ea59-dba8-4285-ac06-f246d2b768b5",
+    "name": "Zulu",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "616a5eb4-728d-4135-a931-5a12732e6bed",
+    "name": "Zulu X",
+    "cells": 9,
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "url": "https://www.flyaerodyne.com/canopy-zulu-x.html",
+    "availableSizes": [92, 102, 112, 122, 132, 152, 172],
     "crossbraced": false,
     "category": 4
   },
@@ -728,6 +885,26 @@ export const canopiesData: Canopy[] = [
     "cells": 9,
     "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
     "lastYearOfProduction": "Unknown",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "5994191a-8401-4df2-a896-b10ba2096d53",
+    "name": "Fandango",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "95673cd3-e260-4e25-9e96-b6313ae60291",
+    "name": "Rage",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
     "availableSizes": [],
     "crossbraced": false,
     "category": 4
@@ -801,6 +978,36 @@ export const canopiesData: Canopy[] = [
     "crossbraced": false,
     "category": 5
   },
+  {
+    "id": "18c01703-f565-4f81-9647-7d2fc46304b3",
+    "name": "X-Wing",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "2a911368-4ea8-460e-a1fa-a1ed43c75adc",
+    "name": "Odyssey",
+    "cells": 9,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [75, 80, 85, 90, 95, 105, 115, 125, 135],
+    "url": "https://skylarkparachutes.com/odyssey-evo",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "f68c7a42-8c4b-46b5-9b5b-079bef3a4e61",
+    "name": "Odyssey EVO",
+    "cells": 9,
+    "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
+    "availableSizes": [85, 90, 95, 100, 105, 110, 115, 120, 130, 140, 150],
+    "url": "https://skylarkparachutes.com/odyssey",
+    "crossbraced": false,
+    "category": 5
+  },
   { 
     "id": "59f8ac99-a1a8-4dbc-88f9-e9949498fe86",
     "name": "Crossfire 3",
@@ -869,6 +1076,16 @@ export const canopiesData: Canopy[] = [
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "fb565371-2481-494f-b826-bcb7c458d147",
+    "name": "Sensei",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [71, 81, 91, 101, 111, 121],
     "crossbraced": true,
     "category": 6
   },
