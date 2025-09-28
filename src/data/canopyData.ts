@@ -788,6 +788,36 @@ export const canopiesData: Canopy[] = [
     "crossbraced": false,
     "category": 3
   },
+  { 
+    "id": "75c68338-1eea-4388-9d12-fb3423e9d03d",
+    "name": "Prime",
+    "cells": 9,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [120, 135, 150, 170, 190],
+    "url": "https://www.fluidwings.com/prime",
+    "crossbraced": false,
+    "category": 3
+  },
+  { 
+    "id": "e6617050-ab8c-4008-908a-8c65f4975cbd",
+    "name": "Nexus",
+    "cells": 9,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [97, 107, 120, 135, 150, 170, 190],
+    "url": "https://www.fluidwings.com/nexus",
+    "crossbraced": false,
+    "category": 3
+  },
+  { 
+    "id": "f8000c7c-b38f-45dd-a7e0-0023e6a8fd5c",
+    "name": "Nexus 2",
+    "cells": 9,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [107, 120, 135, 150, 170, 190, 210],
+    "url": "https://www.fluidwings.com/nx2",
+    "crossbraced": false,
+    "category": 3
+  },
   {
     "id": "d7a43c3e-5c12-4cbe-bbb0-c8d3cdb977eb",
     "name": "Fusion",
@@ -1088,6 +1118,16 @@ export const canopiesData: Canopy[] = [
     "category": 5
   },
   { 
+    "id": "7bc863f3-2e96-4077-89a2-1740cf76e99d",
+    "name": "Tesla",
+    "cells": 9,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [97, 107, 120, 135, 150],
+    "url": "https://www.fluidwings.com/tesla",
+    "crossbraced": false,
+    "category": 5
+  },
+  { 
     "id": "59f8ac99-a1a8-4dbc-88f9-e9949498fe86",
     "name": "Crossfire 3",
     "cells": 9,
@@ -1206,6 +1246,16 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [],
     "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "abdc3ef7-3242-4f05-85c1-3b6b654323a5",
+    "name": "Ganster",
+    "cells": 9,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [79, 84, 90, 96, 107, 120, 135],
+    "url": "https://www.fluidwings.com/gangster",
+    "crossbraced": false,
     "category": 6
   },
   { 
