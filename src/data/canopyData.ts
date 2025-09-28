@@ -850,6 +850,46 @@ export const canopiesData: Canopy[] = [
     "category": 4
   },
   {
+    "id": "2e06ae3e-c2f2-4061-ba6c-24da65318d80",
+    "name": "BT",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "77cec7be-ee24-484c-8c30-16210a4dc347",
+    "name": "Springo",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "d8ad7aa8-5786-413b-9033-78361fd26008",
+    "name": "Electra XS",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "e8b08155-c6ba-483e-a1a2-4f3d40679123",
+    "name": "Springo NG",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
     "id": "e633ea59-dba8-4285-ac06-f246d2b768b5",
     "name": "Zulu",
     "cells": 9,
@@ -885,6 +925,15 @@ export const canopiesData: Canopy[] = [
     "cells": 9,
     "manufacturerId": "70f114ea-8010-4b7b-b324-d54a07c0e824",
     "lastYearOfProduction": "Unknown",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "e561f5f4-4aef-40d3-a1b9-748c6b73664d",
+    "name": "Batwing",
+    "cells": 9,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
     "availableSizes": [],
     "crossbraced": false,
     "category": 4
@@ -958,6 +1007,26 @@ export const canopiesData: Canopy[] = [
     "category": 5
   },
   {
+    "id": "759c5510-86b0-4d5b-88ba-af53b8ba9a6c",
+    "name": "BT Pro",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "24360aa4-0230-4e7e-9e81-fa075b484670",
+    "name": "Instinct",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
     "id": "fef1e6f5-ae9e-494f-9f6d-ac9584c5befd",
     "name": "Vengeance",
     "cells": 9,
@@ -975,6 +1044,16 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
     "availableSizes": [93, 99, 109, 119, 129, 149],
     "url": "https://www.flyaerodyne.com/karma.html",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "d470feef-500b-44bc-963d-638eda6c7d46",
+    "name": "Nitron",
+    "cells": 9,
+    "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [78, 88, 98, 108, 120, 135, 150, 170],
+    "url": "https://www.precision.net/product-page/nitron",
     "crossbraced": false,
     "category": 5
   },
@@ -1052,6 +1131,26 @@ export const canopiesData: Canopy[] = [
     "crossbraced": true,
     "category": 6
   },
+  {
+    "id": "64cdfcf3-5958-4aa7-ba73-da5743755abb",
+    "name": "Ninja",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
+  {
+    "id": "8ff810b6-6d49-4e52-a2fa-56b71e48c328",
+    "name": "Ninja 2",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "1701163f-b205-4229-af47-180b33f8b519",
+    "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
   { 
     "id": "a6bee739-2cbb-4052-90fb-ea8b8116ae20",
     "name": "JFX2",
@@ -1116,6 +1215,16 @@ export const canopiesData: Canopy[] = [
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [],
+    "crossbraced": true,
+    "category": 6
+  },
+  { 
+    "id": "d59886ca-92b3-4eff-b7fb-e7de38f71df4",
+    "name": "Neos",
+    "cells": 21,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "493c940e-950a-41c0-bd33-5bc7a46c0a29",
+    "availableSizes": [59, 69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119],
     "crossbraced": true,
     "category": 6
   },
@@ -1211,6 +1320,95 @@ export const canopiesData: Canopy[] = [
     "firstYearOfProduction": "2018",
     "manufacturerId": "13cc7d53-c38f-4722-9a93-7a059c5ad663",
     "availableSizes": [],
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "5146d28c-fe7b-4b4b-af56-79c3a363b1d4",
+    "name": "Helix",
+    "cells": 21,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [67, 71, 75, 79, 84, 90, 96],
+    "url": "https://www.fluidwings.com/helix",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "13ba0530-e661-41bc-b247-881b14b9a0da",
+    "name": "Saw",
+    "cells": 21,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [67, 71, 75, 79, 84, 90],
+    "url": "https://www.fluidwings.com/saw",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "d2a457b3-45d4-43d7-ac4c-dc1d19981d31",
+    "name": "Airwolf",
+    "cells": 7,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [67, 71, 75, 79, 84, 90, 96],
+    "url": "https://www.fluidwings.com/airwolf",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "f84a59c4-1296-430e-9b0b-2b1405611db3",
+    "name": "Airwolf 2",
+    "cells": 7,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [67, 71, 75, 79, 84, 90, 96, 103],
+    "url": "https://www.fluidwings.com/airwolf2",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "523e1212-b914-4170-8dc0-4643566bb886",
+    "name": "HS",
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [],
+    "url": "https://www.fluidwings.com/hs",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "c043ed19-bfed-4250-b6f0-7f6beb01f5bf",
+    "name": "HK",
+    "cells": 27,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [64, 67, 69, 71, 75, 79, 84],
+    "url": "https://www.fluidwings.com/hk",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "b8a7f47d-13dd-4825-a4b1-e3a9b11c0e39",
+    "name": "HK2",
+    "cells": 27,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [60, 64, 67, 69, 71, 75, 79, 84],
+    "url": "https://www.fluidwings.com/hk2",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "2d113c5b-2d68-479b-96af-74cdb2e8ce7e",
+    "name": "HK3",
+    "cells": 27,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [64, 67, 69, 71, 75, 79, 84],
+    "url": "https://www.fluidwings.com/hk3",
+    "crossbraced": true,
+    "category": 7
+  },
+  { 
+    "id": "c43545c0-317b-45cd-a8cf-946703f73151",
+    "name": "HK Terminal",
+    "cells": 27,
+    "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
+    "availableSizes": [64, 67, 69, 71, 75, 79, 84],
+    "url": "https://www.fluidwings.com/hkterminal",
     "crossbraced": true,
     "category": 7
   },
@@ -1353,5 +1551,12 @@ export const manufacturersData: Manufacturer[] = [
     "country": "Ukraine",
     "shortname": "Skylark Parachutes",
     "url": "https://skylarkparachutes.com"
+  },
+  {
+    "id": "6191ec61-30af-4286-9963-724319bb149e",
+    "name": "Fluid Wings",
+    "country": "United States",
+    "shortname": "Fluid Wings",
+    "url": "https://www.fluidwings.com"
   }
 ];
