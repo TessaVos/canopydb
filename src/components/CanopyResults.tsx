@@ -28,10 +28,30 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
 }) => {
   const canopiesWithSizes = useMemo(() => {
     return canopies.map(canopy => {
-      if (!canopy.availableSizes || canopy.availableSizes.length === 0) return null;
-
       const manufacturer = manufacturersData.find(m => m.id === canopy.manufacturerId);
-      const suitableSizes = [];
+      const userExperienceCategory = getCategoryForExperienceLevel(experienceLevel);
+      
+      // Handle canopies without available sizes
+      if (!canopy.availableSizes || canopy.availableSizes.length === 0) {
+        // Determine if canopy is suitable based on category
+        const isCategorySuitable = canopy.category <= userExperienceCategory;
+        
+        // When safety filter is active, only include suitable categories
+        if (showOnlySafeCanopies && !isCategorySuitable) {
+          return null;
+        }
+        
+        return {
+          ...canopy,
+          manufacturer,
+          suitableSizes: [],
+          safeSizes: [],
+          hasSafeSizes: isCategorySuitable,
+          noSizesAvailable: true
+        };
+      }
+
+      const suitableSizes: { size: number; wingLoading: number; safetyLevel: "safe" | "caution" | "dangerous"; isSafe: boolean; }[] = [];
 
       // Use available sizes directly
       for (const size of canopy.availableSizes) {
@@ -39,7 +59,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size, recentJumps);
         
         // When safety filter is active, only include non-dangerous sizes
-        if ((showOnlySafeCanopies && safetyLevel === 'dangerous') || canopy.category > getCategoryForExperienceLevel(experienceLevel)) {
+        if ((showOnlySafeCanopies && safetyLevel === 'dangerous') || canopy.category > userExperienceCategory) {
           continue;
         }
         
@@ -58,7 +78,8 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         manufacturer,
         suitableSizes: suitableSizes.sort((a, b) => b.size - a.size),
         safeSizes: safeSizes.sort((a, b) => b.size - a.size),
-        hasSafeSizes: safeSizes.length > 0
+        hasSafeSizes: safeSizes.length > 0,
+        noSizesAvailable: false
       };
     }).filter((item): item is NonNullable<typeof item> => item !== null);
   }, [canopies, exitWeightInPounds, experienceLevel, maxSafeWingLoading, showOnlySafeCanopies, recentJumps]);

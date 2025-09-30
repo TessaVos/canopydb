@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { X, ExternalLink, Calendar, Layers, Ruler, Globe } from 'lucide-react';
+import { X, ExternalLink, Calendar, Layers, Ruler, Globe, User, Award } from 'lucide-react';
 import { Canopy, Manufacturer } from '../types';
+import { getExperienceLevelFromCategory, getCategoryDescription } from '../utils/calculations';
 import CanopySizeChart from './CanopySizeChart';
 
 interface CanopyDetailsModalProps {
@@ -70,6 +71,20 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Basic Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Experience Level Required */}
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4 text-gray-500" />
+                <span className="text-sm text-gray-600">Required Experience:</span>
+                <span className="font-medium">{getExperienceLevelFromCategory(canopy.category)}</span>
+              </div>
+              
+              {/* Category */}
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-gray-500" />
+                <span className="text-sm text-gray-600">Category:</span>
+                <span className="font-medium">{canopy.category}</span>
+              </div>
+              
               {canopy.availableSizes && canopy.availableSizes.length > 0 && (
                 <div className="flex items-center gap-2">
                   <Ruler className="w-4 h-4 text-gray-500" />
@@ -98,6 +113,13 @@ const CanopyDetailsModal: React.FC<CanopyDetailsModalProps> = ({
                   <span className="font-medium">{canopy.lastYearOfProduction}</span>
                 </div>
               )}
+            </div>
+            
+            {/* Category Description */}
+            <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800">
+                <strong>Category {canopy.category}:</strong> {getCategoryDescription(canopy.category)}
+              </p>
             </div>
           </div>
 

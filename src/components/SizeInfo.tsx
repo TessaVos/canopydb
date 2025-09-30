@@ -17,6 +17,8 @@ interface SizeInfoProps {
   onToggleExpand: () => void;
   showOnlySafeCanopies?: boolean;
   recentJumps: number;
+  noSizesAvailable?: boolean;
+  hasSafeSizes?: boolean;
 }
 
 const SizeInfo: React.FC<SizeInfoProps> = ({
@@ -28,6 +30,8 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
   onToggleExpand,
   showOnlySafeCanopies = false,
   recentJumps,
+  noSizesAvailable = false,
+  hasSafeSizes = false,
 }) => {
   const getSafetyVariant = (level: 'safe' | 'caution' | 'dangerous') => {
     switch (level) {
@@ -82,8 +86,20 @@ const SizeInfo: React.FC<SizeInfoProps> = ({
           )}
         </div>
       ) : (
-        <div className="text-sm text-gray-500 italic">
-          No available sizes specified
+        <div className="space-y-2">
+          <div className="text-sm text-gray-500 italic">
+            No specific sizes available
+          </div>
+          {noSizesAvailable && (
+            <div className="flex items-center gap-2">
+              <Badge 
+                variant={hasSafeSizes ? 'green' : 'amber'} 
+                className="border text-xs"
+              >
+                {hasSafeSizes ? 'Suitable for your level' : 'Above your current level'}
+              </Badge>
+            </div>
+          )}
         </div>
       )}
     </div>

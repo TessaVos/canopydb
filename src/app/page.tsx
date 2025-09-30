@@ -100,14 +100,21 @@ export default function Home() {
         if (canopy.category > userExperienceCategory) {
           return false;
         }
-        // Also check the existing safety guidelines
-        if (!canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading, userProfile.recentJumps)) {
-          return false;
+        // For canopies with available sizes, check the existing safety guidelines
+        if (canopy.availableSizes && canopy.availableSizes.length > 0) {
+          if (!canopyMeetsSafetyGuidelines(canopy, exitWeightInPounds, experienceLevel, maxSafeWingLoading, userProfile.recentJumps)) {
+            return false;
+          }
         }
       }
 
-      // Must have size information
-      return canopy.availableSizes && canopy.availableSizes.length > 0;
+      // Allow canopies without sizes if their category is suitable for the user
+      if (!canopy.availableSizes || canopy.availableSizes.length === 0) {
+        return canopy.category <= userExperienceCategory;
+      }
+
+      // For canopies with sizes, they can be shown (safety will be handled in CanopyResults)
+      return true;
     });
 
     // Sort by name only

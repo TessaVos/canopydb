@@ -61,6 +61,8 @@ const CanopyTile: React.FC<CanopyTileProps> = ({
             onToggleExpand={() => onToggleExpand(canopy.id)}
             showOnlySafeCanopies={showOnlySafeCanopies}
             recentJumps={recentJumps}
+            noSizesAvailable={canopy.noSizesAvailable}
+            hasSafeSizes={canopy.hasSafeSizes}
           />
 
           {/* Links */}

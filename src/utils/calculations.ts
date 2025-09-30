@@ -185,4 +185,32 @@ export const getCategoryForExperienceLevel = (experienceLevel: 'beginner' | 'nov
     'pro': 7
   };
   return levelMap[experienceLevel];
-}
+};
+
+// Returns experience level description from category number
+export const getExperienceLevelFromCategory = (category: number): string => {
+  const categoryMap: { [key: number]: string } = {
+    1: 'Beginner',
+    2: 'Novice', 
+    3: 'Intermediate',
+    4: 'Advanced',
+    5: 'Expert',
+    6: 'Elite',
+    7: 'Pro'
+  };
+  return categoryMap[category] || 'Unknown';
+};
+
+// Returns category description
+export const getCategoryDescription = (category: number): string => {
+  const descriptions: { [key: number]: string } = {
+    1: 'Student/Training canopies - Very forgiving, stable, and predictable',
+    2: 'Progressive canopies - Good for building skills with gentle performance',
+    3: 'Intermediate canopies - Balanced performance with good handling characteristics',
+    4: 'Advanced canopies - Higher performance requiring solid skills',
+    5: 'Expert canopies - High performance requiring extensive experience',
+    6: 'Elite canopies - Crossbraced high-performance canopies for competition',
+    7: 'Pro canopies - Cutting-edge competition canopies for experts only'
+  };
+  return descriptions[category] || 'Unknown category';
+};
