@@ -68,12 +68,17 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
 
   // Track expanded state for each canopy card
   const [expandedCanopies, setExpandedCanopies] = useState<{ [key: string]: boolean }>({});
+  const [showAllUnsafeCanopies, setShowAllUnsafeCanopies] = useState(false);
 
   const toggleExpand = (canopyId: string) => {
     setExpandedCanopies(prev => ({
       ...prev,
       [canopyId]: !prev[canopyId]
     }));
+  };
+
+  const toggleShowAllUnsafe = () => {
+    setShowAllUnsafeCanopies(prev => !prev);
   };
 
   return (
@@ -131,7 +136,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {unsafeCanopies.slice(0, 4).map(canopy => (
+            {unsafeCanopies.slice(0, showAllUnsafeCanopies ? unsafeCanopies.length : 4).map(canopy => (
               <CanopyTile
                 key={canopy.id}
                 canopy={canopy}
@@ -146,8 +151,8 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
             ))}
           </div>
           {unsafeCanopies.length > 4 && (
-            <p className="text-gray-500 text-sm mt-4 text-center">
-              +{unsafeCanopies.length - 4} more canopies not shown
+            <p className="text-gray-500 text-sm mt-4 text-center cursor-pointer" onClick={toggleShowAllUnsafe}>
+              {showAllUnsafeCanopies ? 'Show Less' : `+${unsafeCanopies.length - 4} more canopies not shown`}
             </p>
           )}
         </div>
