@@ -661,6 +661,26 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "27953f1b-36fb-4fd7-a8f3-beaa09d6932e",
+    "name": "Epicene",
+    "cells": 7,
+    "manufacturerId": "a19e83f6-d151-4494-b2f9-32e0eb1c211d",
+    "availableSizes": [116, 130, 150, 170, 190, 210],
+    "url": "https://squirrel.ws/parachutes/skydiving/epicene",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "58a29395-062b-468d-8663-3b8f465def10",
+    "name": "Z-po",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "df843e90-ab69-434f-9c3e-d92626708cb5",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "045c5428-4ca4-43fc-ab1e-4e4b422c536c",
     "name": "Storm",
     "cells": 7,
@@ -756,6 +776,36 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "ff54e458-27e0-435e-9235-56cbe956327d",
+    "name": "Express",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "60fd9eb1-3c33-4e30-9083-c7a693902c71",
+    "name": "Prodigy",
+    "cells": 7,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "aa361e33-9d7c-43e8-9248-f509085aef76",
+    "name": "Sentry",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "4b09cc1b-e746-4aed-8dd5-d519f7c21f5e",
     "name": "S-Fire",
     "cells": 9,
@@ -807,6 +857,37 @@ export const canopiesData: Canopy[] = [
     "crossbraced": false,
     "category": 3
   },
+  {
+    "id": "cac7545c-6aba-4470-ba14-04371d292901",
+    "name": "Lotus",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b6b9cd0e-5305-4cd9-8533-8a7f36c02856",
+    "availableSizes": [95, 105, 120, 136, 150, 170, 190],
+    "url": "https://paraorg.dfv.aero/uploads/manual_big_air_sportz_samurai-_lotus_main.pdf",
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "6f8d00d6-1f98-4f8e-bb82-283a3e3cb409",
+    "name": "Zepo Exe",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "b2547871-2bf9-4e05-9839-6d65f5631dab",
+    "name": "Volt",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
   { 
     "id": "75c68338-1eea-4388-9d12-fb3423e9d03d",
     "name": "Prime",
@@ -814,6 +895,17 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "6191ec61-30af-4286-9963-724319bb149e",
     "availableSizes": [120, 135, 150, 170, 190],
     "url": "https://www.fluidwings.com/prime",
+    "crossbraced": false,
+    "category": 3
+  },
+  { 
+    "id": "c94bb774-3a87-4a97-8873-ca23bbb69c34",
+    "name": "Spark",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "bb10b2fb-570c-4d70-8b42-c3e72fb616c1",
+    "availableSizes": [105, 120, 135, 150, 170, 190, 210, 230],
+    "url": "https://www.ffp.asso.fr/wp-content/uploads/2002/01/Voile_principale_SPARK_edition_01-2002.pdf",
     "crossbraced": false,
     "category": 3
   },
@@ -884,6 +976,55 @@ export const canopiesData: Canopy[] = [
     "cells": 9,
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "aeac3fd1-4aaa-4b2d-90c3-1d8b77f89c8e",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "25f0ff94-9c92-4bc9-86d8-5294f0416af8",
+    "name": "Pro serie",
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "7303af89-b0c2-4f2b-a053-2d2827bd53cd",
+    "name": "Hurricane",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [95, 105, 120, 135, 150, 170],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "6e57fff4-fa58-4c14-a5e2-1d06db05d417",
+    "name": "Ventus Hybrid",
+    "cells": 9,
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [95, 120, 135, 150, 170],
+    "url": "https://www.dzsports.co.uk/ventus-canopy",
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "212d8807-8e64-4cbb-95c2-091d564e1c2d",
+    "name": "Vixen",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "5f2bb198-0380-41b6-a89d-79fa207f4b8d",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "54b0f356-73b4-4d14-b6be-fab259cf0abb",
+    "name": "Rage",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "d37d1cfc-46b5-4ee7-a607-cb8ea5cc640a",
     "availableSizes": [],
     "crossbraced": false,
     "category": 4
@@ -997,6 +1138,17 @@ export const canopiesData: Canopy[] = [
     "crossbraced": false,
     "category": 4
   },
+  { 
+    "id": "1234a81c-ac3c-4dfa-88f4-41d021a03867",
+    "name": "Contrail",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "bb10b2fb-570c-4d70-8b42-c3e72fb616c1",
+    "availableSizes": [75, 95, 105, 120, 135, 150, 170],
+    "url": "https://www.flyfirebird.com/fb/sites/default/files/downloads/manuals/contrail.pdf",
+    "crossbraced": false,
+    "category": 4
+  },
   {
     "id": "f3bb25bd-8e67-4810-9be5-9334a03fabe0",
     "name": "Firebolt",
@@ -1023,6 +1175,56 @@ export const canopiesData: Canopy[] = [
     "cells": 9,
     "lastYearOfProduction": "Unknown",
     "manufacturerId": "b21ab5a5-a927-4a1f-a671-1f214be4c707",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "4f085fe3-00bc-4674-97f2-4b7fbc24ce72",
+    "name": "Ace",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "cde5112b-4019-401e-939f-85ea828dc05f",
+    "name": "Cobalt",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "0d3301c2-2b1f-4280-9796-615de6147662",
+    "name": "Alpha",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "5837a924-c1a2-4b55-ba8c-0812009275fa",
+    "name": "Space",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "ef074508-024a-4ce6-86c0-97235560ff48",
+    "name": "Impulse",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
     "availableSizes": [],
     "crossbraced": false,
     "category": 4
@@ -1150,6 +1352,7 @@ export const canopiesData: Canopy[] = [
     "id": "85e71c67-a18d-4778-b18c-97d46a67c2ed",
     "name": "Samurai",
     "cells": 9,
+    "lastYearOfProduction": "Unknown",
     "manufacturerId": "b6b9cd0e-5305-4cd9-8533-8a7f36c02856",
     "availableSizes": [95, 105, 120, 136, 150, 170, 190],
     "url": "https://paraorg.dfv.aero/uploads/manual_big_air_sportz_samurai-_lotus_main.pdf",
@@ -1630,11 +1833,25 @@ export const manufacturersData: Manufacturer[] = [
     "url": "https://www.precision.net"
   },
   {
+    "id": "a19e83f6-d151-4494-b2f9-32e0eb1c211d",
+    "name": "Squirrel",
+    "country": "United States",
+    "shortname": "Squirrel",
+    "url": "https://squirrel.ws/"
+  },
+  {
     "id": "76b4f618-0590-4979-8bb6-9790f122949d",
     "name": "Firebird",
     "country": "United States",
     "shortname": "Firebird",
     "url": "https://www.flyfirebird.comftfi"
+  },
+  {
+    "id": "df843e90-ab69-434f-9c3e-d92626708cb5",
+    "name": "Strong",
+    "country": "United States",
+    "shortname": "Strong",
+    "url": "http://www.strongparachutes.com"
   },
   {
     "id": "b378c1b5-a87c-4271-bdec-c53b84a7d87a",
