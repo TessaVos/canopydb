@@ -37,6 +37,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         const isCategorySuitable = canopy.category <= userExperienceCategory;
         
         // When safety filter is active, only include suitable categories
+        // When safety filter is not active, include all canopies but mark unsafe ones appropriately
         if (showOnlySafeCanopies && !isCategorySuitable) {
           return null;
         }
@@ -59,7 +60,7 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
         const safetyLevel = getSafetyLevel(wingLoading, experienceLevel, size, recentJumps);
         
         // When safety filter is active, only include non-dangerous sizes
-        if ((showOnlySafeCanopies && safetyLevel === 'dangerous') || canopy.category > userExperienceCategory) {
+        if (showOnlySafeCanopies && (safetyLevel === 'dangerous' || canopy.category > userExperienceCategory)) {
           continue;
         }
         
@@ -73,12 +74,17 @@ const CanopyResults: React.FC<CanopyResultsProps> = ({
 
       const safeSizes = suitableSizes.filter(s => s.isSafe);
       
+      // For canopies with sizes, if no suitable sizes remain after filtering, 
+      // and the canopy category is too advanced, mark as unsafe
+      const isCategorySuitable = canopy.category <= userExperienceCategory;
+      const hasSafeSizes = safeSizes.length > 0 && isCategorySuitable;
+      
       return {
         ...canopy,
         manufacturer,
         suitableSizes: suitableSizes.sort((a, b) => b.size - a.size),
         safeSizes: safeSizes.sort((a, b) => b.size - a.size),
-        hasSafeSizes: safeSizes.length > 0,
+        hasSafeSizes,
         noSizesAvailable: false
       };
     }).filter((item): item is NonNullable<typeof item> => item !== null);

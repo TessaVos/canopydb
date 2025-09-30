@@ -106,19 +106,36 @@ export default function Home() {
             return false;
           }
         }
+        // For canopies without sizes, only include if category is suitable
+        if (!canopy.availableSizes || canopy.availableSizes.length === 0) {
+          return canopy.category <= userExperienceCategory;
+        }
       }
 
-      // Allow canopies without sizes if their category is suitable for the user
-      if (!canopy.availableSizes || canopy.availableSizes.length === 0) {
-        return canopy.category <= userExperienceCategory;
-      }
-
-      // For canopies with sizes, they can be shown (safety will be handled in CanopyResults)
       return true;
     });
 
-    // Sort by name only
-    return filtered.sort((a, b) => a.name.localeCompare(b.name));
+    // Sort with multiple criteria: current production first, then by information richness, then alphabetically
+    return filtered.sort((a, b) => {
+      // 1. Current production status (current production first)
+      const aIsCurrentProduction = isCanopyCurrentlyProduced(a);
+      const bIsCurrentProduction = isCanopyCurrentlyProduced(b);
+      
+      if (aIsCurrentProduction !== bIsCurrentProduction) {
+        return bIsCurrentProduction ? 1 : -1; // Current production first
+      }
+      
+      // 2. Information richness (URL and links count)
+      const aInfoScore = (a.url ? 1 : 0) + (a.links ? a.links.length : 0);
+      const bInfoScore = (b.url ? 1 : 0) + (b.links ? b.links.length : 0);
+      
+      if (aInfoScore !== bInfoScore) {
+        return bInfoScore - aInfoScore; // Higher info score first
+      }
+      
+      // 3. Alphabetical by name
+      return a.name.localeCompare(b.name);
+    });
   }, [showOnlyCurrentProduction, searchTerm, selectedManufacturer, selectedCategory, showOnlySafeCanopies, experienceLevel, exitWeightInPounds, userExperienceCategory, maxSafeWingLoading, userProfile.recentJumps]);
 
   return (
