@@ -695,6 +695,25 @@ export const canopiesData: Canopy[] = [
     "category": 3
   },
   {
+    "id": "9b85c757-16c5-46b1-bb51-eead140cec36",
+    "name": "Winx",
+    "cells": 7,
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [105, 120, 135, 150, 170, 190, 210],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
+    "id": "32cc728b-dcac-4d94-a754-712be278ed81",
+    "name": "Hornet",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b378c1b5-a87c-4271-bdec-c53b84a7d87a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 3
+  },
+  {
     "id": "38a5471e-14c1-46a4-8426-bb460719cef1",
     "name": "Safire 3",
     "cells": 9,
@@ -960,10 +979,30 @@ export const canopiesData: Canopy[] = [
     "category": 4
   },
   {
+    "id": "2fa16307-0ba7-4e9f-8b06-f1880c0904e6",
+    "name": "Heatwave",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "b378c1b5-a87c-4271-bdec-c53b84a7d87a",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
     "id": "e561f5f4-4aef-40d3-a1b9-748c6b73664d",
     "name": "Batwing",
     "cells": 9,
     "manufacturerId": "bd2a3a07-8c6e-4f27-8ea4-85e038164b11",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 4
+  },
+  {
+    "id": "f3bb25bd-8e67-4810-9be5-9334a03fabe0",
+    "name": "Firebolt",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "93b9939a-6a5e-4a8e-8ce7-9d465098bcf3",
     "availableSizes": [],
     "crossbraced": false,
     "category": 4
@@ -1108,12 +1147,62 @@ export const canopiesData: Canopy[] = [
     "category": 5
   },
   {
+    "id": "85e71c67-a18d-4778-b18c-97d46a67c2ed",
+    "name": "Samurai",
+    "cells": 9,
+    "manufacturerId": "b6b9cd0e-5305-4cd9-8533-8a7f36c02856",
+    "availableSizes": [95, 105, 120, 136, 150, 170, 190],
+    "url": "https://paraorg.dfv.aero/uploads/manual_big_air_sportz_samurai-_lotus_main.pdf",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
     "id": "f68c7a42-8c4b-46b5-9b5b-079bef3a4e61",
     "name": "Odyssey EVO",
     "cells": 9,
     "manufacturerId": "914e09ae-9880-4438-b94a-b829fddfae1b",
     "availableSizes": [85, 90, 95, 100, 105, 110, 115, 120, 130, 140, 150],
     "url": "https://skylarkparachutes.com/odyssey",
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "2799f65d-7a35-4baf-bc62-f9ea0065cb40",
+    "name": "Cobalt Competition",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [90, 104, 117, 132],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "c00c60f7-ab66-4f63-b8e4-5bb0a6b5bd02",
+    "name": "Radical",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "210f4cea-b693-4dc7-b447-dc15c119e40b",
+    "name": "Demon",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "76b4f618-0590-4979-8bb6-9790f122949d",
+    "availableSizes": [80, 100, 120, 130],
+    "crossbraced": false,
+    "category": 5
+  },
+  {
+    "id": "42f8a9bf-61ef-4a18-b7b5-55e7b14275ed",
+    "name": "Chilli",
+    "cells": 9,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "76b4f618-0590-4979-8bb6-9790f122949d",
+    "availableSizes": [],
     "crossbraced": false,
     "category": 5
   },
@@ -1168,6 +1257,16 @@ export const canopiesData: Canopy[] = [
     "manufacturerId": "541E8673-69E0-458A-8633-A3698311FD4B",
     "availableSizes": [71, 75, 79, 84, 90, 96, 103, 111],
     "url": "https://www.performancedesigns.com/compvelocity",
+    "crossbraced": true,
+    "category": 6
+  },
+  {
+    "id": "a9052e7c-8fcf-4045-bea6-64c10ec897a5",
+    "name": "Onyx",
+    "cells": 27,
+    "lastYearOfProduction": "Unknown",
+    "manufacturerId": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "availableSizes": [],
     "crossbraced": true,
     "category": 6
   },
@@ -1576,6 +1675,12 @@ export const manufacturersData: Manufacturer[] = [
     "shortname": "NAA"
   },
   {
+    "id": "ff680a3a-8ba2-45a2-a2e6-85e38cd9ac65",
+    "name": "Atair Aerodynamics",
+    "country": "Slovenia",
+    "shortname": "Atair Aerodynamics"
+  },
+  {
     "id": "bb10b2fb-570c-4d70-8b42-c3e72fb616c1",
     "name": "Performance variable",
     "country": "Germany",
@@ -1587,6 +1692,12 @@ export const manufacturersData: Manufacturer[] = [
     "country": "United States",
     "shortname": "EIFF",
     "url": "https://eiff.com/index.htm"
+  },
+  {
+    "id": "93b9939a-6a5e-4a8e-8ce7-9d465098bcf3",
+    "name": "Jump Shack",
+    "country": "United States",
+    "shortname": "Jump Shack"
   },
   {
     "id": "6066274f-b5b3-46d3-aa72-b9035f9ec9fe",
@@ -1608,5 +1719,11 @@ export const manufacturersData: Manufacturer[] = [
     "country": "United States",
     "shortname": "Fluid Wings",
     "url": "https://www.fluidwings.com"
+  },
+  {
+    "id": "b6b9cd0e-5305-4cd9-8533-8a7f36c02856",
+    "name": "Big Air Sportz",
+    "country": "United States",
+    "shortname": "Big Air Sportz"
   }
 ];
